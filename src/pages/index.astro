@@ -1,0 +1,907 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title="Tigmo">
+  <Fragment set:html={`<div hidden="" id="sprite-plyr"><!--?xml version="1.0" encoding="UTF-8"?--><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><symbol id="plyr-airplay" viewBox="0 0 18 18"><path d="M16 1H2a1 1 0 00-1 1v10a1 1 0 001 1h3v-2H3V3h12v8h-2v2h3a1 1 0 001-1V2a1 1 0 00-1-1z"></path><path d="M4 17h10l-5-6z"></path></symbol><symbol id="plyr-captions-off" viewBox="0 0 18 18"><path d="M1 1c-.6 0-1 .4-1 1v11c0 .6.4 1 1 1h4.6l2.7 2.7c.2.2.4.3.7.3.3 0 .5-.1.7-.3l2.7-2.7H17c.6 0 1-.4 1-1V2c0-.6-.4-1-1-1H1zm4.52 10.15c1.99 0 3.01-1.32 3.28-2.41l-1.29-.39c-.19.66-.78 1.45-1.99 1.45-1.14 0-2.2-.83-2.2-2.34 0-1.61 1.12-2.37 2.18-2.37 1.23 0 1.78.75 1.95 1.43l1.3-.41C8.47 4.96 7.46 3.76 5.5 3.76c-1.9 0-3.61 1.44-3.61 3.7 0 2.26 1.65 3.69 3.63 3.69zm7.57 0c1.99 0 3.01-1.32 3.28-2.41l-1.29-.39c-.19.66-.78 1.45-1.99 1.45-1.14 0-2.2-.83-2.2-2.34 0-1.61 1.12-2.37 2.18-2.37 1.23 0 1.78.75 1.95 1.43l1.3-.41c-.28-1.15-1.29-2.35-3.25-2.35-1.9 0-3.61 1.44-3.61 3.7 0 2.26 1.65 3.69 3.63 3.69z" fill-rule="evenodd" fill-opacity=".5"></path></symbol><symbol id="plyr-captions-on" viewBox="0 0 18 18"><path d="M1 1c-.6 0-1 .4-1 1v11c0 .6.4 1 1 1h4.6l2.7 2.7c.2.2.4.3.7.3.3 0 .5-.1.7-.3l2.7-2.7H17c.6 0 1-.4 1-1V2c0-.6-.4-1-1-1H1zm4.52 10.15c1.99 0 3.01-1.32 3.28-2.41l-1.29-.39c-.19.66-.78 1.45-1.99 1.45-1.14 0-2.2-.83-2.2-2.34 0-1.61 1.12-2.37 2.18-2.37 1.23 0 1.78.75 1.95 1.43l1.3-.41C8.47 4.96 7.46 3.76 5.5 3.76c-1.9 0-3.61 1.44-3.61 3.7 0 2.26 1.65 3.69 3.63 3.69zm7.57 0c1.99 0 3.01-1.32 3.28-2.41l-1.29-.39c-.19.66-.78 1.45-1.99 1.45-1.14 0-2.2-.83-2.2-2.34 0-1.61 1.12-2.37 2.18-2.37 1.23 0 1.78.75 1.95 1.43l1.3-.41c-.28-1.15-1.29-2.35-3.25-2.35-1.9 0-3.61 1.44-3.61 3.7 0 2.26 1.65 3.69 3.63 3.69z" fill-rule="evenodd"></path></symbol><symbol id="plyr-download" viewBox="0 0 18 18"><path d="M9 13c.3 0 .5-.1.7-.3L15.4 7 14 5.6l-4 4V1H8v8.6l-4-4L2.6 7l5.7 5.7c.2.2.4.3.7.3zm-7 2h14v2H2z"></path></symbol><symbol id="plyr-enter-fullscreen" viewBox="0 0 18 18"><path d="M10 3h3.6l-4 4L11 8.4l4-4V8h2V1h-7zM7 9.6l-4 4V10H1v7h7v-2H4.4l4-4z"></path></symbol><symbol id="plyr-exit-fullscreen" viewBox="0 0 18 18"><path d="M1 12h3.6l-4 4L2 17.4l4-4V17h2v-7H1zM16 .6l-4 4V1h-2v7h7V6h-3.6l4-4z"></path></symbol><symbol id="plyr-fast-forward" viewBox="0 0 18 18"><path d="M7.875 7.171L0 1v16l7.875-6.171V17L18 9 7.875 1z"></path></symbol><symbol id="plyr-logo-vimeo" viewBox="0 0 18 18"><path d="M17 5.3c-.1 1.6-1.2 3.7-3.3 6.4-2.2 2.8-4 4.2-5.5 4.2-.9 0-1.7-.9-2.4-2.6C5 10.9 4.4 6 3 6c-.1 0-.5.3-1.2.8l-.8-1c.8-.7 3.5-3.4 4.7-3.5 1.2-.1 2 .7 2.3 2.5.3 2 .8 6.1 1.8 6.1.9 0 2.5-3.4 2.6-4 .1-.9-.3-1.9-2.3-1.1.8-2.6 2.3-3.8 4.5-3.8 1.7.1 2.5 1.2 2.4 3.3z"></path></symbol><symbol id="plyr-logo-youtube" viewBox="0 0 18 18"><path d="M16.8 5.8c-.2-1.3-.8-2.2-2.2-2.4C12.4 3 9 3 9 3s-3.4 0-5.6.4C2 3.6 1.3 4.5 1.2 5.8 1 7.1 1 9 1 9s0 1.9.2 3.2c.2 1.3.8 2.2 2.2 2.4C5.6 15 9 15 9 15s3.4 0 5.6-.4c1.4-.3 2-1.1 2.2-2.4.2-1.3.2-3.2.2-3.2s0-1.9-.2-3.2zM7 12V6l5 3-5 3z"></path></symbol><symbol id="plyr-muted" viewBox="0 0 18 18"><path d="M12.4 12.5l2.1-2.1 2.1 2.1 1.4-1.4L15.9 9 18 6.9l-1.4-1.4-2.1 2.1-2.1-2.1L11 6.9 13.1 9 11 11.1zM3.786 6.008H.714C.286 6.008 0 6.31 0 6.76v4.512c0 .452.286.752.714.752h3.072l4.071 3.858c.5.3 1.143 0 1.143-.602V2.752c0-.601-.643-.977-1.143-.601L3.786 6.008z"></path></symbol><symbol id="plyr-pause" viewBox="0 0 18 18"><path d="M6 1H3c-.6 0-1 .4-1 1v14c0 .6.4 1 1 1h3c.6 0 1-.4 1-1V2c0-.6-.4-1-1-1zm6 0c-.6 0-1 .4-1 1v14c0 .6.4 1 1 1h3c.6 0 1-.4 1-1V2c0-.6-.4-1-1-1h-3z"></path></symbol><symbol id="plyr-pip" viewBox="0 0 18 18"><path d="M13.293 3.293L7.022 9.564l1.414 1.414 6.271-6.271L17 7V1h-6z"></path><path d="M13 15H3V5h5V3H2a1 1 0 00-1 1v12a1 1 0 001 1h12a1 1 0 001-1v-6h-2v5z"></path></symbol><symbol id="plyr-play" viewBox="0 0 18 18"><path d="M15.562 8.1L3.87.225c-.818-.562-1.87 0-1.87.9v15.75c0 .9 1.052 1.462 1.87.9L15.563 9.9c.584-.45.584-1.35 0-1.8z"></path></symbol><symbol id="plyr-restart" viewBox="0 0 18 18"><path d="M9.7 1.2l.7 6.4 2.1-2.1c1.9 1.9 1.9 5.1 0 7-.9 1-2.2 1.5-3.5 1.5-1.3 0-2.6-.5-3.5-1.5-1.9-1.9-1.9-5.1 0-7 .6-.6 1.4-1.1 2.3-1.3l-.6-1.9C6 2.6 4.9 3.2 4 4.1 1.3 6.8 1.3 11.2 4 14c1.3 1.3 3.1 2 4.9 2 1.9 0 3.6-.7 4.9-2 2.7-2.7 2.7-7.1 0-9.9L16 1.9l-6.3-.7z"></path></symbol><symbol id="plyr-rewind" viewBox="0 0 18 18"><path d="M10.125 1L0 9l10.125 8v-6.171L18 17V1l-7.875 6.171z"></path></symbol><symbol id="plyr-settings" viewBox="0 0 18 18"><path d="M16.135 7.784a2 2 0 01-1.23-2.969c.322-.536.225-.998-.094-1.316l-.31-.31c-.318-.318-.78-.415-1.316-.094a2 2 0 01-2.969-1.23C10.065 1.258 9.669 1 9.219 1h-.438c-.45 0-.845.258-.997.865a2 2 0 01-2.969 1.23c-.536-.322-.999-.225-1.317.093l-.31.31c-.318.318-.415.781-.093 1.317a2 2 0 01-1.23 2.969C1.26 7.935 1 8.33 1 8.781v.438c0 .45.258.845.865.997a2 2 0 011.23 2.969c-.322.536-.225.998.094 1.316l.31.31c.319.319.782.415 1.316.094a2 2 0 012.969 1.23c.151.607.547.865.997.865h.438c.45 0 .845-.258.997-.865a2 2 0 012.969-1.23c.535.321.997.225 1.316-.094l.31-.31c.318-.318.415-.781.094-1.316a2 2 0 011.23-2.969c.607-.151.865-.547.865-.997v-.438c0-.451-.26-.846-.865-.997zM9 12a3 3 0 110-6 3 3 0 010 6z"></path></symbol><symbol id="plyr-volume" viewBox="0 0 18 18"><path d="M15.6 3.3c-.4-.4-1-.4-1.4 0-.4.4-.4 1 0 1.4C15.4 5.9 16 7.4 16 9c0 1.6-.6 3.1-1.8 4.3-.4.4-.4 1 0 1.4.2.2.5.3.7.3.3 0 .5-.1.7-.3C17.1 13.2 18 11.2 18 9s-.9-4.2-2.4-5.7z"></path><path d="M11.282 5.282a.909.909 0 000 1.316c.735.735.995 1.458.995 2.402 0 .936-.425 1.917-.995 2.487a.909.909 0 000 1.316c.145.145.636.262 1.018.156a.725.725 0 00.298-.156C13.773 11.733 14.13 10.16 14.13 9c0-.17-.002-.34-.011-.51-.053-.992-.319-2.005-1.522-3.208a.909.909 0 00-1.316 0zm-7.496.726H.714C.286 6.008 0 6.31 0 6.76v4.512c0 .452.286.752.714.752h3.072l4.071 3.858c.5.3 1.143 0 1.143-.602V2.752c0-.601-.643-.977-1.143-.601L3.786 6.008z"></path></symbol></svg></div>
+
+	<div class="site-overlay"></div>
+	<div class="page-fade page-fade-show" style="opacity: 0;"></div>
+<div id="page" class="site">
+<div class="home-shapes">    
+    <div class="container scroll-ify">
+		<div class="shapes-logo" style="opacity: 1;">
+			<a href="https://tigmo.com.au/"><img src="https://media.tigmo.com.au/app/uploads/2021/01/tigmo-logo-white.png?strip=all&amp;lossy=1&amp;ssl=1&amp;fit=160,62" alt="Tigmo Logo" loading="lazy" decoding="async" class=" ls-is-cached lazyloaded"></a>
+		</div>
+        <div class="shapes-grid-container" style="top: 358.25px;">
+			<div class="shape shape-1 lazyloaded" style="background-image: url(&quot;https://media.tigmo.com.au/app/themes/tigmo-wp/images/shape-1.png?strip=all&amp;lossy=1&amp;ssl=1&amp;w=227&quot;); opacity: 1;"></div>
+			<div class="shape shape-2 lazyloaded" style="background-image: url(&quot;https://media.tigmo.com.au/app/themes/tigmo-wp/images/shape-2.png?strip=all&amp;lossy=1&amp;ssl=1&amp;w=227&quot;); opacity: 1;"></div>
+			<div class="shape shape-3 lazyloaded" style="background-image: url(&quot;https://media.tigmo.com.au/app/themes/tigmo-wp/images/shape-3.png?strip=all&amp;lossy=1&amp;ssl=1&amp;w=227&quot;); opacity: 1;"></div>
+			<div class="shape shape-4 lazyloaded" style="background-image: url(&quot;https://media.tigmo.com.au/app/themes/tigmo-wp/images/shape-4.png?strip=all&amp;lossy=1&amp;ssl=1&amp;w=227&quot;); opacity: 1;"></div>
+			<div class="shape shape-5 lazyloaded" style="background-image: url(&quot;https://media.tigmo.com.au/app/themes/tigmo-wp/images/shape-5.png?strip=all&amp;lossy=1&amp;ssl=1&amp;w=227&quot;); opacity: 1;"></div>
+			<div class="shape shape-6 lazyloaded" style="background-image: url(&quot;https://media.tigmo.com.au/app/themes/tigmo-wp/images/shape-6.png?strip=all&amp;lossy=1&amp;ssl=1&amp;w=227&quot;); opacity: 1;"></div>
+			<div class="shape shape-7 lazyloaded" style="background-image: url(&quot;https://media.tigmo.com.au/app/themes/tigmo-wp/images/shape-7.png?strip=all&amp;lossy=1&amp;ssl=1&amp;w=227&quot;); opacity: 1;"></div>
+        </div>
+    </div>
+		<div class="banner-content">
+		<h1 style="opacity: 1;">WordPress Development Melbourne</h1>
+		<h2 style="opacity: 1;">Tigmo collaborates with leading design agencies to produce functional, flawless digital solutions.</h2>
+	</div>
+		<a id="down-arrow-shape" class="arrow-shape" href="#home-top">
+	</a>
+</div> 
+   
+<div class="top-is" id="home-top"></div>
+<input type="text" id="nav_blue_flag" value="" hidden="true">
+<div class="main_header ">
+	<header id="masthead" class="site-header logo-show" role="banner" style="position: fixed; top: 0px;">
+                <nav class="navbar navbar-expand-lg navbar-dark scroll-header-blue" style="background: rgb(2, 17, 159); transition: 0.4s ease-in;">
+        	    	<div class="container menu-logo-container" style="opacity: 1;">
+	    		<div class="tigmo-logo">	
+				   <a href="https://tigmo.com.au/">
+					   					   <img class="custom-logo main-tigmo-logo ls-is-cached lazyloaded" src="https://media.tigmo.com.au/app/uploads/2021/01/tigmo-logo-blue.png?strip=all&amp;lossy=1&amp;ssl=1&amp;fit=160,62" alt="Tigmo Logo" loading="lazy" decoding="async">
+					   					   					   <img class="custom-logo scroll-main-logo lazyloaded" src="https://media.tigmo.com.au/app/themes/tigmo-wp/images/tigmo-logo-white.png?strip=all&amp;lossy=1&amp;ssl=1&amp;fit=160,62" alt="Tigmo Logo" loading="lazy" decoding="async">
+					   <img class="custom-logo hover-logo ls-is-cached lazyloaded" src="https://media.tigmo.com.au/app/uploads/2021/05/logo-hover.png?strip=all&amp;lossy=1&amp;ssl=1&amp;fit=160,62" alt="Tigmo Logo" loading="lazy" decoding="async">
+					   					</a>
+				</div>	
+									<div class="arrow-desktop"><a class="arrow-down-home-page" href="javascript:void(0)" style="opacity: 1; display: none;"></a></div>
+								<!--Top level menu-->
+								<button class="navbar-toggler navbar-toggler-right" type="button" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+				</button>
+		   		<div class="collapse navbar-collapse" id="navbarNav">
+                 <div class="cd-primary-nav">
+					 <a href="https://tigmo.com.au/" class="logo-menu">
+						 <img class="custom-logo ls-is-cached lazyloaded" src="https://media.tigmo.com.au/app/uploads/2021/01/tigmo-logo-white.png?strip=all&amp;lossy=1&amp;ssl=1&amp;fit=160,62" alt="Tigmo Logo" loading="lazy" decoding="async">
+					 </a>
+	            <ul id="menu-main-menu" class="navbar-nav ml-auto"><li id="menu-item-1900" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1900 nav-item"><a href="https://tigmo.com.au/website-development/" class="nav-link">Home</a></li>
+<li id="menu-item-773" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-773 nav-item"><a href="https://tigmo.com.au/projects/" class="nav-link">Our Projects</a></li>
+<li id="menu-item-1439" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1439 nav-item"><a href="https://tigmo.com.au/design-agencies/" class="nav-link">Design Agencies</a></li>
+<li id="menu-item-1446" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1446 nav-item"><a href="https://tigmo.com.au/website-development/" class="nav-link">Website Development</a></li>
+<li id="menu-item-1445" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1445 nav-item"><a href="https://tigmo.com.au/plugin-development/" class="nav-link">Plugin Development</a></li>
+<li id="menu-item-1440" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1440 nav-item"><a href="https://tigmo.com.au/website-hosting/" class="nav-link">Website Hosting</a></li>
+<li id="menu-item-1909" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1909 nav-item"><a href="https://tigmo.com.au/wordpress-support/" class="nav-link">Tech Support</a></li>
+<li id="menu-item-511" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-511 nav-item"><a href="https://tigmo.com.au/contact/" class="nav-link">Contact</a></li>
+</ul>                 </div>
+
+	          </div>
+	        </div>
+		</nav>
+		<a href="javascript:void(0)" class="cd-nav-trigger">Menu<span class="cd-icon"><div class="cd-icon-hambergr"><img class="menu-white ls-is-cached lazyloaded" src="https://media.tigmo.com.au/app/themes/tigmo-wp/images/menu.svg'" alt="" loading="lazy" decoding="async" style="display: none;"><img class="menu-black lazyloaded" src="https://media.tigmo.com.au/app/themes/tigmo-wp/images/menu-black.svg'" alt="" loading="lazy" decoding="async" style="display: block;"></div></span></a>
+	</header><!-- #masthead -->
+							<div class="arrow-mobile"><a class="arrow-down-home-page" href="javascript:void(0)" style="opacity: 1; display: none;"></a></div>
+				</div>
+        <div class="cd-overlay-nav">
+		 <span class="" style="transform: scaleX(0) scaleY(0); height: 3018.87px; width: 3018.87px; top: -1509.44px; left: -1509.44px;"></span>
+	    </div> <!-- cd-overlay-nav -->
+        <div class="cd-overlay-content">
+	     <span class="" style="transform: scaleX(0) scaleY(0); height: 3018.87px; width: 3018.87px; top: -1509.44px; left: -1509.44px;"></span>
+	    </div> <!-- cd-overlay-content -->
+	      <div id="content" class="site-content fade-in-class-home-page" style="background:">
+		
+      
+      
+			  
+			  
+
+	<section class="section--ict ict-show">
+
+		<div class="ict">
+			<div class="ict-form-open-btn">
+				<a href="javascript:void(0)" class="zigzag-animation"><span class="btn-text">Psst!</span><span class="btn-text-hover">Click here..</span></a>
+			</div>
+			<div class="ict-form-wrapper">
+				<a href="javascript:void(0)" class="ict-close"></a>
+				<div class="ict-form-text">
+					<h3> Get in touch</h3>
+					<p>We are a well kept industry secret, working directly with some of the best designers in Australia. If you'd like to learn more about how you can work us, please fill in the form below.</p>
+				</div>
+				<!-- HTML Forms v1.3.23 - https://wordpress.org/plugins/html-forms/ --><form method="post" class="hf-form hf-form-2178 "><input type="hidden" name="_hf_form_id" value="2178"><div style="display: none;"><input type="text" name="_hf_h2178" value=""></div><div class="hf-fields-wrap" style="opacity: 1;"><div class="text-field">
+	<input type="text" name="NAME" required="" placeholder="Name" class="input-field">
+</div>
+<div class="text-field">
+	<input type="email" name="EMAIL" required="" placeholder="Email" class="input-field">
+</div>
+<div class="text-field" style="opacity: 1;">  
+	<input type="text" name="WEBSITE" required="" placeholder="Website" class="input-field">
+</div>
+<div class="message-field">
+	<textarea name="MESSAGE" required="" placeholder="Message" class="input-field"></textarea>
+</div>
+<div class="submit-field">
+  <div class="input-btn-field blob-btn blob-white-color">
+    <input type="submit" value="Send" class="input-btn">
+    <span class="blob-btn__inner">	  							   
+      <span class="blob-btn__blobs">	   								  
+        <span class="blob-btn__blob"></span> <span class="blob-btn__blob"></span>      							   
+        <span class="blob-btn__blob"></span> <span class="blob-btn__blob"></span>						   
+      </span>					   
+    </span>
+  </div>
+</div></div></form><!-- / HTML Forms -->			</div>
+		</div>
+		
+		
+	</section>
+<div class="video-mask parallax-effect " style="opacity: 1;">
+
+    <div class="scroll-speed" style="display: none; opacity: 1; transform: translateY(-477.667px);">
+        <img class="parallax-img parallax-img-1 lazyload" src="https://media.tigmo.com.au/app/themes/tigmo-wp/images/shape-1.png?strip=all&amp;lossy=1&amp;ssl=1&amp;lazy=1" loading="lazy" decoding="async" style="transform:translate3d(0px, -100px, 0px) rotateX(0deg) rotateY(0deg) rotateZ(0deg) scaleX(1) scaleY(1) scaleZ(1); -webkit-transform:translate3d(0px, -100px, 0px) rotateX(0deg) rotateY(0deg) rotateZ(0deg) scaleX(1) scaleY(1) scaleZ(1); ">
+    </div>
+
+    <div class="scroll-speed" style="display: none; opacity: 1;">
+        <img class="parallax-img parallax-img-2 lazyload" src="https://media.tigmo.com.au/app/themes/tigmo-wp/images/shape-11.png?strip=all&amp;lossy=1&amp;ssl=1&amp;lazy=1" loading="lazy" decoding="async" style="transform:translate3d(0px, 100px, 0px) rotateX(0deg) rotateY(0deg) rotateZ(0deg) scaleX(1) scaleY(1) scaleZ(1); -webkit-transform:translate3d(0px, 100px, 0px) rotateX(0deg) rotateY(0deg) rotateZ(0deg) scaleX(1) scaleY(1) scaleZ(1); ">
+    </div>
+
+    <div class="scroll-speed" style="display: none; opacity: 1;">
+        <img class="parallax-img parallax-img-3 lazyload" src="https://media.tigmo.com.au/app/themes/tigmo-wp/images/shape-9.png?strip=all&amp;lossy=1&amp;ssl=1&amp;lazy=1" loading="lazy" decoding="async" style="transform:translate3d(0px, 100px, 0px) rotateX(0deg) rotateY(0deg) rotateZ(0deg) scaleX(1) scaleY(1) scaleZ(1); -webkit-transform:translate3d(0px, 100px, 0px) rotateX(0deg) rotateY(0deg) rotateZ(0deg) scaleX(1) scaleY(1) scaleZ(1); ">
+    </div>
+
+    <div class="scroll-speed" style="display: none; opacity: 1; transform: translateY(-204.714px);">
+        <img class="parallax-img parallax-img-4 lazyload" src="https://media.tigmo.com.au/app/themes/tigmo-wp/images/shape-12.png?strip=all&amp;lossy=1&amp;ssl=1&amp;lazy=1" loading="lazy" decoding="async" style="transform:translate3d(0px, -100px, 0px) rotateX(0deg) rotateY(0deg) rotateZ(0deg) scaleX(1) scaleY(1) scaleZ(1); -webkit-transform:translate3d(0px, -100px, 0px) rotateX(0deg) rotateY(0deg) rotateZ(0deg) scaleX(1) scaleY(1) scaleZ(1); ">
+    </div>
+
+    <div class="scroll-speed" style="display: none; opacity: 1;">
+        <img class="parallax-img parallax-img-5 lazyload" src="https://media.tigmo.com.au/app/themes/tigmo-wp/images/shape-5.png?strip=all&amp;lossy=1&amp;ssl=1&amp;lazy=1" loading="lazy" decoding="async" style="transform:translate3d(0px, 100px, 0px) rotateX(0deg) rotateY(0deg) rotateZ(0deg) scaleX(1) scaleY(1) scaleZ(1); -webkit-transform:translate3d(0px, 100px, 0px) rotateX(0deg) rotateY(0deg) rotateZ(0deg) scaleX(1) scaleY(1) scaleZ(1); ">
+    </div>
+
+    <div class="scroll-speed" style="display: none; opacity: 1;">
+        <img class="parallax-img parallax-img-6 lazyload" src="https://media.tigmo.com.au/app/themes/tigmo-wp/images/shape-7.png?strip=all&amp;lossy=1&amp;ssl=1&amp;lazy=1" loading="lazy" decoding="async" style="transform:translate3d(0px, 100px, 0px) rotateX(0deg) rotateY(0deg) rotateZ(0deg) scaleX(1) scaleY(1) scaleZ(1); -webkit-transform:translate3d(0px, 100px, 0px) rotateX(0deg) rotateY(0deg) rotateZ(0deg) scaleX(1) scaleY(1) scaleZ(1); ">
+    </div>
+
+
+        
+    <!-- <div class="parallex-img" > -->
+    <div class="container home-longspacing longspacing hideme content-start in-view">
+        <div class="container-fluid our-home ">
+            <div class="flex-box">
+                                    <div class="flex-box-item-full tg-about our-work hideme in-view">
+                                                                        <div class="textwidget full-width-content">
+                            <h3>We turn works of art into WordPress websites and enjoy helping companies leverage digital tools to get the most out of their online presence. Technology is our focus, we stay up to date with the latest so that you don’t have to.</h3>
+<p>Plain and simple, we don’t do design. We are a team of website developers who work with creative agencies to turn their design files into websites. If you’re a designer and would like to work with us, click below to find out more about our offering. We also work closely with other designers to assist them with overflow work or to partner on projects.</p>
+<p>If you’re a company, not for profit or charity we are always happy to help point you in the right direction to find a design partner that is right for you, click below to find out how we can help you navigate through the noise.</p>
+                        </div>
+                        
+                        <div class="multiplebutton-section">                        <div class="btnlogodiv btn-with-img">
+                            <img src="https://media.tigmo.com.au/app/uploads/2021/04/design-icon.png?strip=all&amp;lossy=1&amp;ssl=1&amp;fit=166,150" loading="lazy" decoding="async" class=" ls-is-cached lazyloaded">                            <div class="learn-more-btn" style="display: flex; opacity: 1;">
+                                                                <a href="https://tigmo.com.au/design-agencies/" class="learn-more-btn-linke btn blob-btn" target="">
+                                    I'm a designer                                    <span class="blob-btn__inner">
+                                        <span class="blob-btn__blobs">
+                                            <span class="blob-btn__blob"></span> <span class="blob-btn__blob"></span>
+                                            <span class="blob-btn__blob"></span> <span class="blob-btn__blob"></span>
+                                        </span>
+                                    </span>
+                                </a>
+                                                            </div>
+                        </div>
+                                                <div class="btnlogodiv btn-with-img">
+                            <img src="https://media.tigmo.com.au/app/uploads/2021/04/developer.png?strip=all&amp;lossy=1&amp;ssl=1&amp;fit=166,150" loading="lazy" decoding="async" class=" ls-is-cached lazyloaded">                            <div class="learn-more-btn" style="display: flex; opacity: 1;">
+                                                                <a href="https://tigmo.com.au/white-label-wordpress-development/" class="learn-more-btn-linke btn blob-btn" target="">
+                                    I'm a developer                                    <span class="blob-btn__inner">
+                                        <span class="blob-btn__blobs">
+                                            <span class="blob-btn__blob"></span> <span class="blob-btn__blob"></span>
+                                            <span class="blob-btn__blob"></span> <span class="blob-btn__blob"></span>
+                                        </span>
+                                    </span>
+                                </a>
+                                                            </div>
+                        </div>
+                                                <div class="btnlogodiv btn-with-img" style="opacity: 1;">
+                            <img src="https://media.tigmo.com.au/app/uploads/2021/04/charity.png?strip=all&amp;lossy=1&amp;ssl=1&amp;fit=166,150" loading="lazy" decoding="async" class=" ls-is-cached lazyloaded">                            <div class="learn-more-btn" style="display: flex; opacity: 1;">
+                                                                <a href="https://tigmo.com.au/giving-back/" class="learn-more-btn-linke btn blob-btn" target="">
+                                    I'm a charity                                    <span class="blob-btn__inner">
+                                        <span class="blob-btn__blobs">
+                                            <span class="blob-btn__blob"></span> <span class="blob-btn__blob"></span>
+                                            <span class="blob-btn__blob"></span> <span class="blob-btn__blob"></span>
+                                        </span>
+                                    </span>
+                                </a>
+                                                            </div>
+                        </div>
+                                                <div class="btnlogodiv btn-with-img">
+                            <img src="https://media.tigmo.com.au/app/uploads/2021/04/company.png?strip=all&amp;lossy=1&amp;ssl=1&amp;fit=166,150" loading="lazy" decoding="async" class=" ls-is-cached lazyloaded">                            <div class="learn-more-btn" style="display: flex; opacity: 1;">
+                                                                <a href="https://tigmo.com.au/website-development/" class="learn-more-btn-linke btn blob-btn" target="">
+                                    I'm a company                                    <span class="blob-btn__inner">
+                                        <span class="blob-btn__blobs">
+                                            <span class="blob-btn__blob"></span> <span class="blob-btn__blob"></span>
+                                            <span class="blob-btn__blob"></span> <span class="blob-btn__blob"></span>
+                                        </span>
+                                    </span>
+                                </a>
+                                                            </div>
+                        </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- <img class="parallex-img-1 lazyload" data-parallax="{&quot;y&quot; : -100}" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="?//php%20bloginfo(&#039;template_directory&#039;);?/images/shape-1.png" decoding="async"><noscript><img class="parallex-img-1" data-parallax="{&quot;y&quot; : -100}" src="<?//php bloginfo('template_directory');?>/images/shape-1.png" data-eio="l"></noscript>
+        <img class="parallex-img-2 lazyload" data-parallax="{&quot;y&quot; : 100}" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="?//php%20bloginfo(&#039;template_directory&#039;);?/images/shape-16.png" decoding="async"><noscript><img class="parallex-img-2" data-parallax="{&quot;y&quot; : 100}" src="<?//php bloginfo('template_directory');?>/images/shape-16.png" data-eio="l"></noscript> -->
+        <!-- </div> -->
+
+                <div class="container hideme  longspacing content-start in-view">
+	<div class="content-box flex-box" style="opacity: 1;">
+		<div class="flex-box-item-full hideme in-view">
+
+						            							<div class="iframe-poster video-holder  load-iframe">
+																<img src="/assets/fb0bf3e4a13d.jpg" alt="" class="overlay-dynamic" style="display: none;">
+																<!--vimeo Plyr.io-->
+								<div class="plyr plyr--full-ui plyr--video plyr--vimeo plyr--fullscreen-enabled plyr__poster-enabled plyr--playing plyr--hide-controls" id="player"><div class="plyr__controls"><button class="plyr__controls__item plyr__control plyr__control--pressed" type="button" aria-label="Pause"><svg class="icon--pressed" aria-hidden="true" focusable="false"><use xlink:href="#plyr-pause"></use></svg><svg class="icon--not-pressed" aria-hidden="true" focusable="false"><use xlink:href="#plyr-play"></use></svg><span class="label--pressed plyr__sr-only">Pause</span><span class="label--not-pressed plyr__sr-only">Play</span></button><div class="plyr__controls__item plyr__progress__container"><div class="plyr__progress"><input type="range" min="0" max="100" step="0.01" value="0" autocomplete="off" role="slider" aria-label="Seek" aria-valuemin="0" aria-valuemax="31.767" aria-valuenow="5.515" id="plyr-seek-2254" aria-valuetext="00:05 of 00:31" style="--value: 17.36%;"><progress class="plyr__progress__buffer" min="0" max="100" value="75.5" role="progressbar" aria-hidden="true">% buffered</progress><span class="plyr__tooltip">00:00</span></div></div><div class="plyr__controls__item plyr__time--current plyr__time" aria-label="Current time" style="opacity: 1;">-00:26</div><div class="plyr__controls__item plyr__volume"><button type="button" class="plyr__control plyr__control--pressed"><svg class="icon--pressed" aria-hidden="true" focusable="false"><use xlink:href="#plyr-muted"></use></svg><svg class="icon--not-pressed" aria-hidden="true" focusable="false"><use xlink:href="#plyr-volume"></use></svg><span class="label--pressed plyr__sr-only">Unmute</span><span class="label--not-pressed plyr__sr-only">Mute</span></button><input type="range" min="0" max="1" step="0.05" value="0" autocomplete="off" role="slider" aria-label="Volume" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0" id="plyr-volume-2254" aria-valuetext="0.0%" style="--value: 0%;"></div><button class="plyr__controls__item plyr__control" type="button"><svg class="icon--pressed" aria-hidden="true" focusable="false"><use xlink:href="#plyr-captions-on"></use></svg><svg class="icon--not-pressed" aria-hidden="true" focusable="false"><use xlink:href="#plyr-captions-off"></use></svg><span class="label--pressed plyr__sr-only">Disable captions</span><span class="label--not-pressed plyr__sr-only">Enable captions</span></button><div class="plyr__controls__item plyr__menu"><button aria-haspopup="true" aria-controls="plyr-settings-2254" aria-expanded="false" type="button" class="plyr__control"><svg aria-hidden="true" focusable="false"><use xlink:href="#plyr-settings"></use></svg><span class="plyr__sr-only">Settings</span></button><div class="plyr__menu__container" id="plyr-settings-2254" hidden=""><div><div id="plyr-settings-2254-home"><div role="menu"><button type="button" class="plyr__control plyr__control--forward" role="menuitem" aria-haspopup="true" hidden=""><span>Captions<span class="plyr__menu__value">Disabled</span></span></button><button type="button" class="plyr__control plyr__control--forward" role="menuitem" aria-haspopup="true" hidden=""><span>Quality<span class="plyr__menu__value">undefined</span></span></button><button type="button" class="plyr__control plyr__control--forward" role="menuitem" aria-haspopup="true"><span>Speed<span class="plyr__menu__value">Normal</span></span></button></div></div><div id="plyr-settings-2254-captions" hidden=""><button type="button" class="plyr__control plyr__control--back"><span aria-hidden="true">Captions</span><span class="plyr__sr-only">Go back to previous menu</span></button><div role="menu"></div></div><div id="plyr-settings-2254-quality" hidden="" style="opacity: 1;"><button type="button" class="plyr__control plyr__control--back"><span aria-hidden="true">Quality</span><span class="plyr__sr-only">Go back to previous menu</span></button><div role="menu"></div></div><div id="plyr-settings-2254-speed" hidden=""><button type="button" class="plyr__control plyr__control--back"><span aria-hidden="true">Speed</span><span class="plyr__sr-only">Go back to previous menu</span></button><div role="menu"><button type="button" role="menuitemradio" class="plyr__control" aria-checked="false" value="0.5"><span>0.5×</span></button><button type="button" role="menuitemradio" class="plyr__control" aria-checked="false" value="0.75"><span>0.75×</span></button><button type="button" role="menuitemradio" class="plyr__control" aria-checked="true" value="1"><span>Normal</span></button><button type="button" role="menuitemradio" class="plyr__control" aria-checked="false" value="1.25"><span>1.25×</span></button><button type="button" role="menuitemradio" class="plyr__control" aria-checked="false" value="1.5"><span>1.5×</span></button><button type="button" role="menuitemradio" class="plyr__control" aria-checked="false" value="1.75"><span>1.75×</span></button><button type="button" role="menuitemradio" class="plyr__control" aria-checked="false" value="2"><span>2×</span></button></div></div></div></div></div><button class="plyr__controls__item plyr__control" type="button"><svg aria-hidden="true" focusable="false"><use xlink:href="#plyr-pip"></use></svg><span class="plyr__sr-only">PIP</span></button><button class="plyr__controls__item plyr__control" type="button"><svg class="icon--pressed" aria-hidden="true" focusable="false"><use xlink:href="#plyr-exit-fullscreen"></use></svg><svg class="icon--not-pressed" aria-hidden="true" focusable="false"><use xlink:href="#plyr-enter-fullscreen"></use></svg><span class="label--pressed plyr__sr-only">Exit fullscreen</span><span class="label--not-pressed plyr__sr-only">Enter fullscreen</span></button></div>
+									<div class="plyr__video-wrapper plyr__video-embed" style="padding-bottom: 47.6793%;"><div class="plyr__video-embed__container" style="transform: translateY(-40.0668%);"></div><div class="plyr__poster" style="background-image: url(&quot;/assets/fb0bf3e4a13d.jpg&quot;);"></div></div><div class="plyr__captions" style="opacity: 1;"></div>
+								<button type="button" class="plyr__control plyr__control--overlaid plyr__control--pressed" aria-label="Pause"><svg aria-hidden="true" focusable="false"><use xlink:href="#plyr-play"></use></svg><span class="plyr__sr-only">Play</span></button></div>
+							</div>
+								
+							</div>		
+	</div>
+</div>
+        
+    <!-- <div class="parallex-img" > -->
+    <div class="container home-longspacing longspacing hideme content-start in-view">
+        <div class="container-fluid our-home ">
+            <div class="flex-box">
+                                    <div class="flex-box-item-full tg-about our-work hideme in-view">
+                                                                        <h3 class="widget-title">Our process</h3>
+                                                <div class="textwidget full-width-content">
+                            <p>We work closely with our design partners to build a bespoke WordPress theme that meets the goals and aspirations of the businesses we work with. You won’t find anything off the shelf with us, everything is written from scratch for you. It’s not for everyone as there are plenty of off the shelf options that are faster and easier to produce. We take pride in our craft and don’t stop until our partners and companies we work with have the outcomes the desire.</p>
+                        </div>
+                        
+                        
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- <img class="parallex-img-1 lazyload" data-parallax="{&quot;y&quot; : -100}" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="?//php%20bloginfo(&#039;template_directory&#039;);?/images/shape-1.png" decoding="async"><noscript><img class="parallex-img-1" data-parallax="{&quot;y&quot; : -100}" src="<?//php bloginfo('template_directory');?>/images/shape-1.png" data-eio="l"></noscript>
+        <img class="parallex-img-2 lazyload" data-parallax="{&quot;y&quot; : 100}" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="?//php%20bloginfo(&#039;template_directory&#039;);?/images/shape-16.png" decoding="async"><noscript><img class="parallex-img-2" data-parallax="{&quot;y&quot; : 100}" src="<?//php bloginfo('template_directory');?>/images/shape-16.png" data-eio="l"></noscript> -->
+        <!-- </div> -->
+
+                                <div id="large-spacing" class="news-owl-carousel carousel-1 carousel-spacing content-start hideme longspacing in-view">
+                                    <div class="owl-carousel owl-carousel-team-repeatoff owl-loaded owl-drag">
+
+                                                
+                                                
+                                                
+                                                
+                                                
+                                                
+                                                
+                                                
+                                                
+                                                
+                                            <div class="owl-stage-outer"><div class="owl-stage" style="transform: translate3d(0px, 0px, 0px); transition: all; width: 3205px;"><div class="owl-item active owl-item-visible" style="width: 298.5px; margin-right: 22px;"><div class="process-tiles item owl-items skip-lazy" style="background-image: url('https://media.tigmo.com.au/app/uploads/2019/09/Kick-Off.png?strip=all&amp;lossy=1&amp;ssl=1')">
+                            <h3>Analysis</h3>
+                            <div class="learn-more-btn tilebtn" style="display: none;">
+                                
+                            </div>
+
+                            <p>All successful projects start with a plan. We provide an in depth analysis of the project to make sure that design and development are aligned from day one.</p>
+                        </div></div><div class="owl-item active owl-item-visible" style="width: 298.5px; margin-right: 22px;"><div class="process-tiles item owl-items skip-lazy" style="background-image: url('https://media.tigmo.com.au/app/uploads/2019/09/Scoping.png?strip=all&amp;lossy=1&amp;ssl=1')">
+                            <h3>Design</h3>
+                            <div class="learn-more-btn tilebtn" style="display: none;">
+                                
+                            </div>
+
+                            <p>During the design phase we are hands off and let the chosen design partner work their magic.</p>
+                        </div></div><div class="owl-item active owl-item-visible" style="width: 298.5px; margin-right: 22px; opacity: 1;"><div class="process-tiles item owl-items skip-lazy" style="background-image: url('https://media.tigmo.com.au/app/uploads/2021/02/Design.png?strip=all&amp;lossy=1&amp;ssl=1')">
+                            <h3>Scoping</h3>
+                            <div class="learn-more-btn tilebtn" style="display: none;">
+                                
+                            </div>
+
+                            <p>Once the designs are approved we work through every inch of the design to put together both technical and functional scopes that meet the project goals.</p>
+                        </div></div><div class="owl-item active owl-item-visible" style="width: 298.5px; margin-right: 22px;"><div class="process-tiles item owl-items skip-lazy" style="background-image: url('https://media.tigmo.com.au/app/uploads/2019/09/Prototyping.png?strip=all&amp;lossy=1&amp;ssl=1')">
+                            <h3>Development</h3>
+                            <div class="learn-more-btn tilebtn" style="display: none;">
+                                
+                            </div>
+
+                            <p>The development stage is where we take the designers vision and turn it into reality creating a WordPress theme that matches the designs across all devices, browsers and screen sizes.</p>
+                        </div></div><div class="owl-item" style="width: 298.5px; margin-right: 22px;"><div class="process-tiles item owl-items skip-lazy" style="background-image: url('https://media.tigmo.com.au/app/uploads/2019/09/Development.png?strip=all&amp;lossy=1&amp;ssl=1')">
+                            <h3>Quality Assurance</h3>
+                            <div class="learn-more-btn tilebtn" style="display: none;">
+                                
+                            </div>
+
+                            <p>To ensure the highest quality we go through quality assurance testing both internally and externally with our design partners.</p>
+                        </div></div><div class="owl-item" style="width: 298.5px; margin-right: 22px;"><div class="process-tiles item owl-items skip-lazy" style="background-image: url('https://media.tigmo.com.au/app/uploads/2019/09/Launch.png?strip=all&amp;lossy=1&amp;ssl=1')">
+                            <h3>Training</h3>
+                            <div class="learn-more-btn tilebtn" style="display: none;">
+                                
+                            </div>
+
+                            <p>So that you get the most out of your website we conduct in person training sessions where we hand over the keys to the site and teach you how to drive.</p>
+                        </div></div><div class="owl-item" style="width: 298.5px; margin-right: 22px;"><div class="process-tiles item owl-items skip-lazy" style="background-image: url('https://media.tigmo.com.au/app/uploads/2019/09/Training.png?strip=all&amp;lossy=1&amp;ssl=1')">
+                            <h3>Go Live</h3>
+                            <div class="learn-more-btn tilebtn" style="display: none;">
+                                
+                            </div>
+
+                            <p>We take care of launching the website including working with all third parties to ensure a seamless transition to the new website.</p>
+                        </div></div><div class="owl-item" style="width: 298.5px; margin-right: 22px;"><div class="process-tiles item owl-items skip-lazy" style="background-image: url('https://media.tigmo.com.au/app/uploads/2021/02/Management.png?strip=all&amp;lossy=1&amp;ssl=1')">
+                            <h3>Ongoing support</h3>
+                            <div class="learn-more-btn tilebtn" style="display: none;">
+                                
+                            </div>
+
+                            <p>We’re always ready to help and here for the long term. From routine maintenance to ongoing support we have a range of plans to suit your business needs.</p>
+                        </div></div><div class="owl-item" style="width: 298.5px; margin-right: 22px;"><div class="process-tiles item owl-items skip-lazy" style="background-image: url('https://media.tigmo.com.au/app/uploads/2019/09/second-last.png?strip=all&amp;lossy=1&amp;ssl=1')">
+                            <h3></h3>
+                            <div class="learn-more-btn tilebtn" style="display: none;">
+                                
+                            </div>
+
+                                                    </div></div><div class="owl-item" style="width: 298.5px; margin-right: 22px;"><div class="process-tiles item owl-items skip-lazy" style="background-image: url('https://media.tigmo.com.au/app/uploads/2019/09/last.png?strip=all&amp;lossy=1&amp;ssl=1')">
+                            <h3></h3>
+                            <div class="learn-more-btn tilebtn" style="display: none;">
+                                
+                            </div>
+
+                                                    </div></div></div></div><div class="owl-nav"><button type="button" role="presentation" class="owl-prev disabled"><i class="caret-left"><img src="/assets/e7701ce431d1.png"> <img src="/assets/5c456eb617ff.png"></i></button><button type="button" role="presentation" class="owl-next"><i class="caret-right"><img src="/assets/4e4aa8899c11.png"> <img src="/assets/6344def6b129.png"></i></button></div><div class="owl-dots" style="opacity: 1;"><button role="button" class="owl-dot active"><span></span></button><button role="button" class="owl-dot"><span></span></button><button role="button" class="owl-dot"><span></span></button></div></div>
+                            </div>
+
+
+        
+    <!-- <div class="parallex-img" > -->
+    <div class="container home-longspacing longspacing hideme content-start in-view">
+        <div class="container-fluid our-home ">
+            <div class="flex-box">
+                                    <div class="flex-box-item-full tg-about our-work hideme in-view">
+                                                                        <h3 class="widget-title">Our Work</h3>
+                                                <div class="textwidget full-width-content">
+                            <p>At Tigmo we use technology to create digital assets that our clients can use to leverage their business and brand into the future.</p>
+<p>Our development team, project managers and partners work closely together throughout the process to ensure that the user experience and interface create a customer journey that is seamless and intuitive.</p>
+<p>Rather than develop websites that only look good, we aim to create systems that fit our client’s needs. We actively work with our clients to they get the most out of technology empowering staff to manage the website into the future removing reliance on specialised staff and complex processes.</p>
+                        </div>
+                        
+                        <div class="singlebutton-section" style="opacity: 1;">                        <div class="btnlogodiv">
+                                                        <div class="learn-more-btn" style="display: flex;">
+                                                                <a href="https://tigmo.com.au/projects/" class="learn-more-btn-linke btn blob-btn" target="">
+                                    View our projects                                    <span class="blob-btn__inner">
+                                        <span class="blob-btn__blobs">
+                                            <span class="blob-btn__blob"></span> <span class="blob-btn__blob"></span>
+                                            <span class="blob-btn__blob"></span> <span class="blob-btn__blob"></span>
+                                        </span>
+                                    </span>
+                                </a>
+                                                            </div>
+                        </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- <img class="parallex-img-1 lazyload" data-parallax="{&quot;y&quot; : -100}" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="?//php%20bloginfo(&#039;template_directory&#039;);?/images/shape-1.png" decoding="async"><noscript><img class="parallex-img-1" data-parallax="{&quot;y&quot; : -100}" src="<?//php bloginfo('template_directory');?>/images/shape-1.png" data-eio="l"></noscript>
+        <img class="parallex-img-2 lazyload" data-parallax="{&quot;y&quot; : 100}" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="?//php%20bloginfo(&#039;template_directory&#039;);?/images/shape-16.png" decoding="async"><noscript><img class="parallex-img-2" data-parallax="{&quot;y&quot; : 100}" src="<?//php bloginfo('template_directory');?>/images/shape-16.png" data-eio="l"></noscript> -->
+        <!-- </div> -->
+
+                <div id="" class="container longspacing content-start">
+            <div class="container-fluid project-home our-project-home project-spacing hideme in-view">
+                <div class="row">
+                    <div class="col-lg-6 col-sm-6 col-md-6 col-xs-12 col-xl-6 project-item hideme projects-home-page in-view">
+                                <a class="project-link" href="https://tradeforgood.com.au/" target="_blank" rel="nofollow"> 
+                                  <div class="project-hover">
+                                   
+                                    <div class="scroll-on-hover">
+                                        <img src="https://media.tigmo.com.au/app/uploads/2021/04/trade-for-good.jpg?strip=all&amp;lossy=1&amp;ssl=1&amp;fit=591,389" style="transition: all s ease-out; -o-transition: all s ease-out; -ms-transition: all s ease-out; -moz-transition: all s ease-out; -webkit-transition: all s ease-out;" loading="lazy" decoding="async" class=" lazyloaded">
+                                    </div>
+                                    <h4>Trade for Good</h4>
+                                    <p class="project-category">Website</p>
+                                    <p class="view-project">View Project</p>
+                                    </div>
+                                </a>
+                             </div><div class="col-lg-6 col-sm-6 col-md-6 col-xs-12 col-xl-6 project-item hideme projects-home-page in-view">
+                                <a class="project-link" href="https://slowwardrobe.com.au/" target="_blank" rel="nofollow"> 
+                                  <div class="project-hover">
+                                   
+                                    <div class="scroll-on-hover">
+                                        <img src="https://media.tigmo.com.au/app/uploads/2021/02/slow-wardrobe.png?strip=all&amp;lossy=1&amp;ssl=1&amp;fit=591,389" style="transition: all s ease-out; -o-transition: all s ease-out; -ms-transition: all s ease-out; -moz-transition: all s ease-out; -webkit-transition: all s ease-out;" loading="lazy" decoding="async" class=" lazyloaded">
+                                    </div>
+                                    <h4>Slow Wardrobe</h4>
+                                    <p class="project-category">Directory</p>
+                                    <p class="view-project">View Project</p>
+                                    </div>
+                                </a>
+                             </div>
+
+                </div>
+            </div>
+        </div>
+                <div id="" class="container longspacing content-start">
+			      <div class="container-fluid project-home">
+			      <div class="row">
+                <div class="tigmo-testimonial hideme in-view" style="background-color:#76bc21">
+				    <h3><span class="section-review-text">Really great customer service every step of the way. Beautiful design outcome and informed helpful advice throughout. Highly recommend, and looking forward to the next opportunity to work together!</span></h3>
+				    <p><span><img class="dash lazyloaded" src="https://media.tigmo.com.au/app/themes/tigmo-wp/images/dash.png?strip=all&amp;lossy=1&amp;ssl=1&amp;fit=14,2" alt="Dash - Image" loading="lazy" decoding="async">Kate Mansell, Designer</span></p>
+			    </div>
+			    </div>
+			    </div>
+                </div>        <div id="" class="container longspacing content-start">
+            <div class="container-fluid project-home our-project-home project-spacing hideme in-view">
+                <div class="row">
+                    <div class="col-lg-6 col-sm-6 col-md-6 col-xs-12 col-xl-6 project-item hideme projects-home-page in-view">
+                                <a class="project-link" href="https://rch150.org.au/" target="_blank" rel="nofollow"> 
+                                  <div class="project-hover">
+                                   
+                                    <div class="scroll-on-hover">
+                                        <img src="https://media.tigmo.com.au/app/uploads/2019/12/rch150.png?strip=all&amp;lossy=1&amp;ssl=1&amp;fit=591,389" style="transition: all s ease-out; -o-transition: all s ease-out; -ms-transition: all s ease-out; -moz-transition: all s ease-out; -webkit-transition: all s ease-out;" loading="lazy" decoding="async" class=" lazyloaded">
+                                    </div>
+                                    <h4>RCH150</h4>
+                                    <p class="project-category">Website</p>
+                                    <p class="view-project">View Project</p>
+                                    </div>
+                                </a>
+                             </div><div class="col-lg-6 col-sm-6 col-md-6 col-xs-12 col-xl-6 project-item hideme projects-home-page in-view">
+                                <a class="project-link" href="https://thriveglobal-apac.com/" target="_blank" rel="nofollow"> 
+                                  <div class="project-hover">
+                                   
+                                    <div class="scroll-on-hover">
+                                        <img src="https://media.tigmo.com.au/app/uploads/2021/02/thrive-global.png?strip=all&amp;lossy=1&amp;ssl=1&amp;fit=591,389" style="transition: all s ease-out; -o-transition: all s ease-out; -ms-transition: all s ease-out; -moz-transition: all s ease-out; -webkit-transition: all s ease-out;" loading="lazy" decoding="async" class=" lazyloaded">
+                                    </div>
+                                    <h4>Thrive Global</h4>
+                                    <p class="project-category">Website</p>
+                                    <p class="view-project">View Project</p>
+                                    </div>
+                                </a>
+                             </div>
+
+                </div>
+            </div>
+        </div>
+                <div id="" class="container longspacing content-start">
+			      <div class="container-fluid project-home">
+			      <div class="row">
+                <div class="tigmo-testimonial hideme in-view" style="background-color:#00c4b3">
+				    <h3>A highly capable team of developers with extremely responsive and efficient customer service skills. Their expertise and advice in website development is brilliant and their ongoing support is outstanding. I’ve enjoyed working with the team and I highly recommend this business to others.</h3>
+				    <p><span><img class="dash ls-is-cached lazyloaded" src="https://media.tigmo.com.au/app/themes/tigmo-wp/images/dash.png?strip=all&amp;lossy=1&amp;ssl=1&amp;fit=14,2" alt="Dash - Image" loading="lazy" decoding="async">Josh Mascara, RCH150</span></p>
+			    </div>
+			    </div>
+			    </div>
+                </div>                        <div id="large-spacing" class="container longspacing hideme content-start in-view">
+            <div class="view_more_button">
+                <a href="https://tigmo.com.au/projects/" class="link-animation button-animation zigzag-animation">View more of our projects</a>
+            </div>
+        </div>
+                                <!--Start Section shapes UI -->
+        <div id="" class="checked-sec content-start hideme longspacing in-view">
+            <div class="section-gridshapes">
+                                <div class="section-gridshape-left">
+                    <div class="grid-left-items">
+                                                                        <div class="grid-shape-item"><img src="https://media.tigmo.com.au/app/themes/tigmo-wp/images/tigmo-transparent-shape.png?strip=all&amp;lossy=1&amp;ssl=1&amp;lazy=1" loading="lazy" decoding="async" class="lazyload">
+                        </div>
+                                                                        <div class="grid-shape-item"><img src="https://media.tigmo.com.au/app/themes/tigmo-wp/images/tigmo-transparent-shape.png?strip=all&amp;lossy=1&amp;ssl=1&amp;fit=240,241" loading="lazy" decoding="async" class=" lazyloaded">
+                        </div>
+                                                                        <div class="grid-shape-item" style="opacity: 1;"><img src="https://media.tigmo.com.au/app/themes/tigmo-wp/images/tigmo-transparent-shape.png?strip=all&amp;lossy=1&amp;ssl=1&amp;fit=240,241" loading="lazy" decoding="async" class=" lazyloaded">
+                        </div>
+                                                                        <div class="grid-shape-item"><img src="https://media.tigmo.com.au/app/themes/tigmo-wp/images/tigmo-transparent-shape.png?strip=all&amp;lossy=1&amp;ssl=1&amp;fit=240,241" loading="lazy" decoding="async" class=" lazyloaded">
+                        </div>
+                                                                    </div>
+                </div>
+                                                <div class="section-gridshape-center">
+                    <div class="container content-start" style="padding-left:0; padding-right:0;">
+                        <div class="grid-center-items">
+                                                                                    <div class="grid-shape-item gridshape-2" style="opacity: 1;"><a href="javascript:void(0)" class="shapeLink"><img src="https://media.tigmo.com.au/app/uploads/2020/02/tigmo-shape-10.png?strip=all&amp;lossy=1&amp;ssl=1&amp;fit=240,241" loading="lazy" decoding="async" class=" lazyloaded"></a>
+                            </div>
+                                                                                    <div class="grid-shape-item"><img src="https://media.tigmo.com.au/app/themes/tigmo-wp/images/tigmo-transparent-shape.png?strip=all&amp;lossy=1&amp;ssl=1&amp;fit=240,241" loading="lazy" decoding="async" class=" lazyloaded">
+                            </div>
+                                                                                    <div class="grid-shape-item gridshape-4" style="opacity: 1;"><a href="javascript:void(0)" class="shapeLink"><img src="https://media.tigmo.com.au/app/uploads/2020/02/tigmo-shape-1.png?strip=all&amp;lossy=1&amp;ssl=1&amp;fit=240,241" loading="lazy" decoding="async" class=" lazyloaded"></a>
+                            </div>
+                                                                                    <div class="grid-shape-item gridshape-12" style="opacity: 1;"><a href="javascript:void(0)" class="shapeLink"><img src="https://media.tigmo.com.au/app/uploads/2020/02/tigmo-shape-5.png?strip=all&amp;lossy=1&amp;ssl=1&amp;fit=240,240" loading="lazy" decoding="async" class=" lazyloaded"></a>
+                            </div>
+                                                                                </div>
+                    </div>
+                </div>
+                                                <div class="section-gridshape-right" style="opacity: 1;">
+                    <div class="grid-right-items">
+                                                                        <div class="grid-shape-item"><img src="https://media.tigmo.com.au/app/themes/tigmo-wp/images/tigmo-transparent-shape.png?strip=all&amp;lossy=1&amp;ssl=1&amp;fit=240,241" loading="lazy" decoding="async" class=" lazyloaded">
+                        </div>
+                                                                        <div class="grid-shape-item"><img src="https://media.tigmo.com.au/app/themes/tigmo-wp/images/tigmo-transparent-shape.png?strip=all&amp;lossy=1&amp;ssl=1&amp;fit=240,241" loading="lazy" decoding="async" class=" lazyloaded">
+                        </div>
+                                                                        <div class="grid-shape-item" style="opacity: 1;"><img src="https://media.tigmo.com.au/app/themes/tigmo-wp/images/tigmo-transparent-shape.png?strip=all&amp;lossy=1&amp;ssl=1&amp;fit=240,241" loading="lazy" decoding="async" class=" lazyloaded">
+                        </div>
+                                                                        <div class="grid-shape-item"><img src="https://media.tigmo.com.au/app/themes/tigmo-wp/images/tigmo-transparent-shape.png?strip=all&amp;lossy=1&amp;ssl=1&amp;lazy=1" loading="lazy" decoding="async" class="lazyload">
+                        </div>
+                                                                    </div>
+                </div>
+                            </div>
+        </div>
+        <!--End Section shapes UI -->
+
+                        <div id="large-spacing" class="secondary-services home-services hideme longspacing in-view">
+            <div class="container content-start">
+                <div class="secondary-services-box flex-box">
+                    <div class="flex-box-item-full" style="opacity: 1;">
+                        <h2 class="sow-headline line-draw-animation in-view">Our Services</h2>
+                    </div>
+                </div>
+                <div class="secondary-box grid-box">
+                                        <div class="secondary-services-text">
+                        <img class="secondary-services-image lazyloaded" src="https://media.tigmo.com.au/app/uploads/2021/04/website-developer.png?strip=all&amp;lossy=1&amp;ssl=1&amp;fit=178,150" alt="" loading="lazy" decoding="async">                        <h3 class="widget-title">Website Development</h3>
+                        <div class="textwidget">
+                            <p>Simple, safe and secure. Host with us and never have your website thrown in a deep dark pit full of peers common to the shared hosting servers of the world.</p>
+                        </div>
+                                                <a href="https://tigmo.com.au/website-development/" class="learn-more-btn-linke btn services-learn-more-link blob-btn blob-white-color" target="">
+                            Learn more                            <span class="blob-btn__inner">
+                                <span class="blob-btn__blobs">
+                                    <span class="blob-btn__blob"></span> <span class="blob-btn__blob"></span>
+                                    <span class="blob-btn__blob"></span> <span class="blob-btn__blob"></span>
+                                </span>
+                            </span>
+                        </a>
+                                            </div>
+                                        <div class="secondary-services-text">
+                        <img class="secondary-services-image lazyloaded" src="https://media.tigmo.com.au/app/uploads/2021/04/hosting.png?strip=all&amp;lossy=1&amp;ssl=1&amp;fit=178,150" alt="" loading="lazy" decoding="async">                        <h3 class="widget-title">Hosting</h3>
+                        <div class="textwidget">
+                            <p>Simple, safe and secure. Host with us and never have your website thrown in a deep dark pit full of peers common to the shared hosting servers of the world.</p>
+                        </div>
+                                                <a href="https://tigmo.com.au/website-hosting/" class="learn-more-btn-linke btn services-learn-more-link blob-btn blob-white-color" target="">
+                            Learn more                            <span class="blob-btn__inner">
+                                <span class="blob-btn__blobs">
+                                    <span class="blob-btn__blob"></span> <span class="blob-btn__blob"></span>
+                                    <span class="blob-btn__blob"></span> <span class="blob-btn__blob"></span>
+                                </span>
+                            </span>
+                        </a>
+                                            </div>
+                                        <div class="secondary-services-text" style="opacity: 1;">
+                        <img class="secondary-services-image lazyloaded" src="https://media.tigmo.com.au/app/uploads/2021/04/web-development.png?strip=all&amp;lossy=1&amp;ssl=1&amp;fit=178,150" alt="" loading="lazy" decoding="async">                        <h3 class="widget-title">Plugin Development</h3>
+                        <div class="textwidget">
+                            <p>Without traffic your website and digital marketing efforts are as good as a billboard in the desert. We provide bespoke monthly reporting to help give you actionable insights.</p>
+                        </div>
+                                                <a href="https://tigmo.com.au/plugin-development/" class="learn-more-btn-linke btn services-learn-more-link blob-btn blob-white-color" target="">
+                            Learn more                            <span class="blob-btn__inner">
+                                <span class="blob-btn__blobs">
+                                    <span class="blob-btn__blob"></span> <span class="blob-btn__blob"></span>
+                                    <span class="blob-btn__blob"></span> <span class="blob-btn__blob"></span>
+                                </span>
+                            </span>
+                        </a>
+                                            </div>
+                                        <div class="secondary-services-text">
+                        <img class="secondary-services-image lazyloaded" src="https://media.tigmo.com.au/app/uploads/2021/04/404.png?strip=all&amp;lossy=1&amp;ssl=1&amp;fit=178,150" alt="" loading="lazy" decoding="async">                        <h3 class="widget-title">Support</h3>
+                        <div class="textwidget">
+                            <p>Bugs, updates and maintenance are a thing of the past. Leave your website with us and take the worry out of staying online.</p>
+                        </div>
+                                                <a href="https://tigmo.com.au/website-hosting/" class="learn-more-btn-linke btn services-learn-more-link blob-btn blob-white-color" target="">
+                            Learn more                            <span class="blob-btn__inner">
+                                <span class="blob-btn__blobs">
+                                    <span class="blob-btn__blob"></span> <span class="blob-btn__blob"></span>
+                                    <span class="blob-btn__blob"></span> <span class="blob-btn__blob"></span>
+                                </span>
+                            </span>
+                        </a>
+                                            </div>
+                                    </div>
+            </div>
+        </div>
+        <div id="large-spacing" class="container longspacing content-start">
+			      <div class="container-fluid project-home">
+			      <div class="row">
+                <div class="tigmo-testimonial hideme in-view" style="background-color:#3a4cb9">
+				    <h3><span class="section-review-text">Really great customer service every step of the way. Beautiful design outcome and informed helpful advice throughout. Highly recommend, and looking forward to the next opportunity to work together!</span></h3>
+				    <p><span><img class="dash ls-is-cached lazyloaded" src="https://media.tigmo.com.au/app/themes/tigmo-wp/images/dash.png?strip=all&amp;lossy=1&amp;ssl=1&amp;fit=14,2" alt="Dash - Image" loading="lazy" decoding="async">Kate Mansell, Designer</span></p>
+			    </div>
+			    </div>
+			    </div>
+                </div>
+    <!-- <div class="parallex-img" > -->
+    <div class="container home-longspacing longspacing hideme content-start in-view">
+        <div class="container-fluid our-home ">
+            <div class="flex-box">
+                                    <div class="flex-box-item-full tg-about our-work hideme in-view">
+                                                                        <h3 class="widget-title">Get in touch</h3>
+                                                <div class="textwidget full-width-content">
+                            <p>Whether you’re a designer, developer or dedicated business owner we’re always happy to chat to see if we can help with any of your development needs.</p>
+                        </div>
+                        
+                        
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- <img class="parallex-img-1 lazyload" data-parallax="{&quot;y&quot; : -100}" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="?//php%20bloginfo(&#039;template_directory&#039;);?/images/shape-1.png" decoding="async"><noscript><img class="parallex-img-1" data-parallax="{&quot;y&quot; : -100}" src="<?//php bloginfo('template_directory');?>/images/shape-1.png" data-eio="l"></noscript>
+        <img class="parallex-img-2 lazyload" data-parallax="{&quot;y&quot; : 100}" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="?//php%20bloginfo(&#039;template_directory&#039;);?/images/shape-16.png" decoding="async"><noscript><img class="parallex-img-2" data-parallax="{&quot;y&quot; : 100}" src="<?//php bloginfo('template_directory');?>/images/shape-16.png" data-eio="l"></noscript> -->
+        <!-- </div> -->
+
+                        <div id="" class="container longspacing hideme content-start in-view">
+            <div class="container-fluid project-home our-project-home home-long-tile-section hideme in-view">
+                <div class="grid-columns-box">
+                                        <div class="grid-columns">
+                        <h3>Designers</h3>
+                        <p>If you're a design agency looking for an experienced team of WordPress developers to work on your next project, click below to see how we can work together.</p>
+                                                                        <a href="https://tigmo.com.au/design-agencies/" class="learn-more-btn-linke services-learn-more-link btn blob-btn blob-white-color" target="">
+                            <span class="">I'm a designer</span>
+                            <span class="blob-btn__inner">
+                                <span class="blob-btn__blobs">
+                                    <span class="blob-btn__blob"></span> <span class="blob-btn__blob"></span>
+                                    <span class="blob-btn__blob"></span> <span class="blob-btn__blob"></span>
+                                </span>
+                            </span>
+                        </a>
+                                            </div>
+                                        <div class="grid-columns">
+                        <h3>Developers</h3>
+                        <p>We like working with like minded, passionate developers. If you're an agency with overflow work and would like to discuss partnering with us, click below.</p>
+                                                                        <a href="https://tigmo.com.au/white-label-wordpress-development/" class="learn-more-btn-linke services-learn-more-link btn blob-btn blob-white-color" target="">
+                            <span class="">I'm a developer</span>
+                            <span class="blob-btn__inner">
+                                <span class="blob-btn__blobs">
+                                    <span class="blob-btn__blob"></span> <span class="blob-btn__blob"></span>
+                                    <span class="blob-btn__blob"></span> <span class="blob-btn__blob"></span>
+                                </span>
+                            </span>
+                        </a>
+                                            </div>
+                                        <div class="grid-columns" style="opacity: 1;">
+                        <h3>Charities</h3>
+                        <p>We like to work with clubs, charities and not for profits. If that's you and you're looking for a website developer click below to find out more.</p>
+                                                                        <a href="https://tigmo.com.au/giving-back/" class="learn-more-btn-linke services-learn-more-link btn blob-btn blob-white-color" target="">
+                            <span class="">I'm a charity</span>
+                            <span class="blob-btn__inner">
+                                <span class="blob-btn__blobs">
+                                    <span class="blob-btn__blob"></span> <span class="blob-btn__blob"></span>
+                                    <span class="blob-btn__blob"></span> <span class="blob-btn__blob"></span>
+                                </span>
+                            </span>
+                        </a>
+                                            </div>
+                                        <div class="grid-columns">
+                        <h3>Companies</h3>
+                        <p>If you're a company looking for a new website but not sure what to do next. Give us a call and we can talk through the process.</p>
+                                                                        <a href="https://tigmo.com.au/contact/" class="learn-more-btn-linke services-learn-more-link btn blob-btn blob-white-color" target="">
+                            <span class="">I'm a company</span>
+                            <span class="blob-btn__inner">
+                                <span class="blob-btn__blobs">
+                                    <span class="blob-btn__blob"></span> <span class="blob-btn__blob"></span>
+                                    <span class="blob-btn__blob"></span> <span class="blob-btn__blob"></span>
+                                </span>
+                            </span>
+                        </a>
+                                            </div>
+                                    </div>
+            </div>
+        </div>
+                        <!--Start Section shapes UI -->
+        <div id="" class="checked-sec content-start hideme longspacing in-view">
+            <div class="section-gridshapes">
+                                <div class="section-gridshape-left">
+                    <div class="grid-left-items">
+                                                                        <div class="grid-shape-item"><img src="https://media.tigmo.com.au/app/themes/tigmo-wp/images/tigmo-transparent-shape.png?strip=all&amp;lossy=1&amp;ssl=1&amp;fit=240,241" loading="lazy" decoding="async" class=" ls-is-cached lazyloaded">
+                        </div>
+                                                                        <div class="grid-shape-item"><img src="https://media.tigmo.com.au/app/themes/tigmo-wp/images/tigmo-transparent-shape.png?strip=all&amp;lossy=1&amp;ssl=1&amp;fit=240,241" loading="lazy" decoding="async" class=" ls-is-cached lazyloaded">
+                        </div>
+                                                                        <div class="grid-shape-item" style="opacity: 1;"><img src="https://media.tigmo.com.au/app/themes/tigmo-wp/images/tigmo-transparent-shape.png?strip=all&amp;lossy=1&amp;ssl=1&amp;fit=240,241" loading="lazy" decoding="async" class=" ls-is-cached lazyloaded">
+                        </div>
+                                                                        <div class="grid-shape-item"><img src="https://media.tigmo.com.au/app/themes/tigmo-wp/images/tigmo-transparent-shape.png?strip=all&amp;lossy=1&amp;ssl=1&amp;fit=240,241" loading="lazy" decoding="async" class=" ls-is-cached lazyloaded">
+                        </div>
+                                                                    </div>
+                </div>
+                                                <div class="section-gridshape-center">
+                    <div class="container content-start" style="padding-left:0; padding-right:0;">
+                        <div class="grid-center-items">
+                                                                                    <div class="grid-shape-item gridshape-2" style="opacity: 1;"><a href="javascript:void(0)" class="shapeLink"><img src="https://media.tigmo.com.au/app/uploads/2020/02/tigmo-shape-4.png?strip=all&amp;lossy=1&amp;ssl=1&amp;fit=240,241" loading="lazy" decoding="async" class=" lazyloaded"></a>
+                            </div>
+                                                                                    <div class="grid-shape-item gridshape-10" style="opacity: 1;"><a href="javascript:void(0)" class="shapeLink"><img src="https://media.tigmo.com.au/app/uploads/2020/02/tigmo-shape-14.png?strip=all&amp;lossy=1&amp;ssl=1&amp;fit=240,241" loading="lazy" decoding="async" class=" lazyloaded"></a>
+                            </div>
+                                                                                    <div class="grid-shape-item" style="opacity: 1;"><img src="https://media.tigmo.com.au/app/themes/tigmo-wp/images/tigmo-transparent-shape.png?strip=all&amp;lossy=1&amp;ssl=1&amp;fit=240,241" loading="lazy" decoding="async" class=" ls-is-cached lazyloaded">
+                            </div>
+                                                                                    <div class="grid-shape-item gridshape-12" style="opacity: 1;"><a href="javascript:void(0)" class="shapeLink"><img src="https://media.tigmo.com.au/app/uploads/2020/02/tigmo-shape-8.png?strip=all&amp;lossy=1&amp;ssl=1&amp;fit=240,241" loading="lazy" decoding="async" class=" lazyloaded"></a>
+                            </div>
+                                                                                </div>
+                    </div>
+                </div>
+                                                <div class="section-gridshape-right" style="opacity: 1;">
+                    <div class="grid-right-items">
+                                                                        <div class="grid-shape-item"><img src="https://media.tigmo.com.au/app/themes/tigmo-wp/images/tigmo-transparent-shape.png?strip=all&amp;lossy=1&amp;ssl=1&amp;fit=240,241" loading="lazy" decoding="async" class=" ls-is-cached lazyloaded">
+                        </div>
+                                                                        <div class="grid-shape-item"><img src="https://media.tigmo.com.au/app/themes/tigmo-wp/images/tigmo-transparent-shape.png?strip=all&amp;lossy=1&amp;ssl=1&amp;fit=240,241" loading="lazy" decoding="async" class=" ls-is-cached lazyloaded">
+                        </div>
+                                                                        <div class="grid-shape-item" style="opacity: 1;"><img src="https://media.tigmo.com.au/app/themes/tigmo-wp/images/tigmo-transparent-shape.png?strip=all&amp;lossy=1&amp;ssl=1&amp;fit=240,241" loading="lazy" decoding="async" class=" ls-is-cached lazyloaded">
+                        </div>
+                                                                        <div class="grid-shape-item"><img src="https://media.tigmo.com.au/app/themes/tigmo-wp/images/tigmo-transparent-shape.png?strip=all&amp;lossy=1&amp;ssl=1&amp;fit=240,241" loading="lazy" decoding="async" class=" ls-is-cached lazyloaded">
+                        </div>
+                                                                    </div>
+                </div>
+                            </div>
+        </div>
+        <!--End Section shapes UI -->
+
+                                
+        <div class="container content-start">
+            <!--   <a class="arrow-btn" href="#">
+            <span>View Website 
+                <img class="arrow-black lazyload" src="https://media.tigmo.com.au/images/arrow.png?strip=all&lossy=1&ssl=1&lazy=1" alt="" data-src="https://media.tigmo.com.au/images/arrow.png?strip=all&lossy=1&ssl=1" loading="lazy" decoding="async"><noscript><img class="arrow-black" src="https://media.tigmo.com.au/images/arrow.png?strip=all&lossy=1&ssl=1" alt="" data-eio="l"></noscript>
+                <img class="arrow-white lazyload" src="https://media.tigmo.com.au/images/arrow-white.png?strip=all&lossy=1&ssl=1&lazy=1" alt="" data-src="https://media.tigmo.com.au/images/arrow-white.png?strip=all&lossy=1&ssl=1" loading="lazy" decoding="async"><noscript><img class="arrow-white" src="https://media.tigmo.com.au/images/arrow-white.png?strip=all&lossy=1&ssl=1" alt="" data-eio="l"></noscript>
+        </span>
+        </a> -->
+
+            <!-- <a class="arrow-btn-animated" href="#">View Website </a> -->
+
+        </div>
+        </div><!-- #content -->
+    
+<div class="footer-blue-bg page-template-footer-blue footer-index" style="opacity: 1;">
+		
+	<div class="footer-area content-start">
+	<footer id="colophon" class="site-footer animated fadeIn delay2 duration2" role="contentinfo">
+						<div class="main_footer_border hideme in-view">
+					<div class="footer-first-section line-draw-animation in-view">
+						<h5>Get in touch with us</h5>
+					</div>
+				</div>
+		<div class="container hideme in-view">
+			<div class="row">
+				<div class="col-md-12">
+					
+				</div><!--  .col-md-4 -->
+				<div class="col-md-6 message_here">
+					<section id="text-2" class="  widget  widget_text">			
+						<div class="textwidget">
+							<div class="new-footer-block-1 background-fill">
+								<!-- HTML Forms v1.3.23 - https://wordpress.org/plugins/html-forms/ --><form method="post" class="hf-form hf-form-1022 "><input type="hidden" name="_hf_form_id" value="1022"><div style="display: none;"><input type="text" name="_hf_h1022" value=""></div><div class="hf-fields-wrap" style="opacity: 1;"><div class="main-class-form-footer">	
+  <label class="label-1 press-enter">Send through an enquiry or give us a call</label><br>
+  <label class="label-2 enquiry-contact">Press ENTER to submit</label>
+</div>
+<textarea id="txt" name="MESSAGE" placeholder="Type us a message here" required="required"></textarea>
+<input id="submit" type="submit" value="Submit">
+</div></form><!-- / HTML Forms -->							</div>
+						</div>
+					</section>
+				</div><!--  .col-md-4 -->
+				<div class="col-md-6 footer-last india-tigmo" style="opacity: 1;">
+				<!-- <div class="col-md-6 footer-last"> -->
+					<div class="footer-third-section">
+						<a href="https://www.google.com/maps/place/Tigmo/@-37.818115,144.99647,15z/data=!4m5!3m4!1s0x0:0xf04afc22c2d4f5b1!8m2!3d-37.818115!4d144.99647" target="_blank" rel="noopener" class="map-link button-animation zigzag-animation">
+							Tigmo Head Office<br>
+27 Stephenson Street<br>
+Cremorne 3121                        </a><br>
+						<div class="footer-email" style="opacity: 1;">
+														Email - <a class="button-animation zigzag-animation" href="mailto:hello@tigmo.com.au" ?="" target="_top">hello@tigmo.com.au</a><br>
+							Phone - <a class="button-animation zigzag-animation" href="tel:03 9421 5304">03 9421 5304</a>
+						</div>
+					</div>
+            					<!--//IP ADDRESS-->
+			   <span id="country">United States</span>							<div class="footer-third-section india-show" style="opacity: 1;">
+					<a href="https://www.google.co.in/maps/place/Tigmo/@22.6999061,75.8650133,17z/data=!3m1!4b1!4m5!3m4!1s0x3962fde6cb8131fd:0x90757c10b864d1f8!8m2!3d22.6999061!4d75.867202?hl=en'..'" target="_blank" rel="noopener" class="map-link zigzag-animation">
+					Tigmo Development Office<br>
+206 Bansiwala Tower Near<br>
+Agrasen Square Indore, M.P. 452001</a><br>
+				<div class="footer-email" style="opacity: 1;">
+				
+				Email - <a class="button-animation zigzag-animation" href="mailto:hello@tigmo.com.au" target="_top">hello@tigmo.com.au</a><br>
+				Phone - <a class="button-animation zigzag-animation" href="tel:919713310931">+91-9713 310 931</a>
+				</div>
+				</div>
+								
+				</div><!--  .col-md-4 -->
+			</div><!--  .row -->
+
+			<!--<div class="site-info">
+				&copy; 			</div> -->
+		</div><!--  .container -->
+		
+		<!-- svg animation start -->
+					<!-- Svg Div -->
+			<div id="footersvg" style="opacity: 1;">
+			<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1080" width="1080" height="1080" preserveAspectRatio="xMidYMid meet" style="width: 100%; height: 100%; transform: translate3d(0px, 0px, 0px);"><defs><clipPath id="__lottie_element_2"><rect width="1080" height="1080" x="0" y="0"></rect></clipPath><filter id="__lottie_element_7" filterUnits="objectBoundingBox" x="0%" y="0%" width="100%" height="100%"><feComponentTransfer in="SourceGraphic"><feFuncA type="table" tableValues="1.0 0.0"></feFuncA></feComponentTransfer></filter><mask id="__lottie_element_6" mask-type="alpha"><g filter="url(#__lottie_element_7)"><rect width="1080" height="1080" x="0" y="0" fill="#ffffff" opacity="0"></rect><g transform="matrix(1,0,0,1,540,540)" opacity="1" style="display: block;"><g opacity="1" transform="matrix(1,0,0,1,14,464)"><path fill="rgb(255,175,140)" fill-opacity="1" d=" M642,-278 C642,-278 642,278 642,278 C642,278 -642,278 -642,278 C-642,278 -642,-278 -642,-278 C-642,-278 642,-278 642,-278z"></path><path stroke-linecap="butt" stroke-linejoin="miter" fill-opacity="0" stroke-miterlimit="4" stroke="rgb(254,194,114)" stroke-opacity="1" stroke-width="36" d="M0 0"></path></g></g></g></mask><filter id="__lottie_element_14" filterUnits="objectBoundingBox" x="0%" y="0%" width="100%" height="100%"><feComponentTransfer in="SourceGraphic"><feFuncA type="table" tableValues="1.0 0.0"></feFuncA></feComponentTransfer></filter><mask id="__lottie_element_13" mask-type="alpha"><g filter="url(#__lottie_element_14)"><rect width="1080" height="1080" x="0" y="0" fill="#ffffff" opacity="0"></rect><g transform="matrix(1,0,0,1,540,540)" opacity="1" style="display: block;"><g opacity="1" transform="matrix(1,0,0,1,14,464)"><path fill="rgb(255,175,140)" fill-opacity="1" d=" M642,-278 C642,-278 642,278 642,278 C642,278 -642,278 -642,278 C-642,278 -642,-278 -642,-278 C-642,-278 642,-278 642,-278z"></path><path stroke-linecap="butt" stroke-linejoin="miter" fill-opacity="0" stroke-miterlimit="4" stroke="rgb(254,194,114)" stroke-opacity="1" stroke-width="36" d="M0 0"></path></g></g></g></mask><filter id="__lottie_element_21" filterUnits="objectBoundingBox" x="0%" y="0%" width="100%" height="100%"><feComponentTransfer in="SourceGraphic"><feFuncA type="table" tableValues="1.0 0.0"></feFuncA></feComponentTransfer></filter><mask id="__lottie_element_20" mask-type="alpha"><g filter="url(#__lottie_element_21)"><rect width="1080" height="1080" x="0" y="0" fill="#ffffff" opacity="0"></rect><g transform="matrix(1,0,0,1,538.5,544.25)" opacity="1" style="display: block;"><g opacity="1" transform="matrix(1,0,0,1,14,464)"><path fill="rgb(255,175,140)" fill-opacity="1" d=" M642,-278 C642,-278 642,278 642,278 C642,278 -642,278 -642,278 C-642,278 -642,-278 -642,-278 C-642,-278 642,-278 642,-278z"></path><path stroke-linecap="butt" stroke-linejoin="miter" fill-opacity="0" stroke-miterlimit="4" stroke="rgb(254,194,114)" stroke-opacity="1" stroke-width="36" d="M0 0"></path></g></g></g></mask></defs><g clip-path="url(#__lottie_element_2)"><g mask="url(#__lottie_element_20)" style="display: block;"><g transform="matrix(1.1055599451065063,0,0,1.1055599451065063,-58.50238037109375,145.24761962890625)" opacity="1"><g opacity="1" transform="matrix(1,0,0,1,865.1430053710938,594.843994140625)"><path fill="rgb(255,150,200)" fill-opacity="1" d=" M-76.27100372314453,79.50900268554688 C-76.27100372314453,79.50900268554688 -60.64099884033203,14.336000442504883 -17.594999313354492,-25.781999588012695 C25.45199966430664,-65.9010009765625 59.117000579833984,-79.50900268554688 69.77899932861328,-62.95399856567383 C76.2699966430664,-52.875999450683594 40.56999969482422,-17.089000701904297 29.808000564575195,79.50900268554688 C29.808000564575195,79.50900268554688 -76.27100372314453,79.50900268554688 -76.27100372314453,79.50900268554688z"></path></g><g opacity="1" transform="matrix(1,0,0,1,890.2540283203125,610.2960205078125)"><path fill="rgb(255,140,183)" fill-opacity="1" d=" M-49.35200119018555,63.768001556396484 C-49.35200119018555,63.768001556396484 -36.42300033569336,-40.362998962402344 39.676998138427734,-57.27399826049805 C13.364999771118164,-13.98900032043457 4.543000221252441,63.53900146484375 4.543000221252441,63.53900146484375 C4.543000221252441,63.53900146484375 -49.35200119018555,63.768001556396484 -49.35200119018555,63.768001556396484z"></path></g></g></g><g mask="url(#__lottie_element_13)" style="display: block;"><g transform="matrix(1.1055599451065063,0,0,1.1055599451065063,-58.50238037109375,220.24761962890625)" opacity="1"><g opacity="1" transform="matrix(0.48480960726737976,0.874619722366333,-0.874619722366333,0.48480960726737976,654.323974609375,524.9180297851562)"><path fill="rgb(153,172,248)" fill-opacity="1" d=" M-88.06400299072266,66.94000244140625 C-88.06400299072266,66.94000244140625 -118.50499725341797,39.90700149536133 -99.80000305175781,14.79699993133545 C-81.09600067138672,-10.312999725341797 -48.29800033569336,17.358999252319336 -48.29800033569336,17.358999252319336 C-48.29800033569336,17.358999252319336 -71.74400329589844,-9.414999961853027 -50.861000061035156,-30.55500030517578 C-29.979000091552734,-51.69300079345703 -3.052000045776367,-15.052000045776367 -3.052000045776367,-15.052000045776367 C-3.052000045776367,-15.052000045776367 -88.06400299072266,66.94000244140625 -88.06400299072266,66.94000244140625z"></path></g><g opacity="1" transform="matrix(0.5150380730628967,0.8571673035621643,-0.8571673035621643,0.5150380730628967,656.8720092773438,514.9180297851562)"><path fill="rgb(119,145,229)" fill-opacity="1" d=" M-3.052000045776367,-15.052000045776367 C-3.052000045776367,-15.052000045776367 -11.27400016784668,-53.74300003051758 15.50100040435791,-59.893001556396484 C42.27799987792969,-66.04199981689453 52.854000091552734,-29.770999908447266 52.854000091552734,-29.770999908447266 C52.854000091552734,-29.770999908447266 62.1349983215332,-66.93900299072266 90.32099914550781,-64.50499725341797 C118.50499725341797,-62.06999969482422 115.43099975585938,-23.253000259399414 115.43099975585938,-23.253000259399414 C115.43099975585938,-23.253000259399414 -3.052000045776367,-15.052000045776367 -3.052000045776367,-15.052000045776367z"></path></g><g opacity="1" transform="matrix(1,0,0,1,575.8480224609375,566.6389770507812)"><path fill="rgb(255,150,200)" fill-opacity="1" d=" M-182.2519989013672,107.71399688720703 C-182.2519989013672,107.71399688720703 -170.5469970703125,5.21999979019165 -98.4209976196289,-51.24700164794922 C-26.29599952697754,-107.71399688720703 76.09400177001953,-92.37699890136719 122.69999694824219,-42.70600128173828 C182.2519989013672,20.760000228881836 178.6929931640625,107.71399688720703 178.6929931640625,107.71399688720703 C178.6929931640625,107.71399688720703 74.3010025024414,107.71399688720703 74.3010025024414,107.71399688720703 C74.3010025024414,107.71399688720703 62.974998474121094,36.0629997253418 8.612000465393066,36.0629997253418 C-45.750999450683594,36.0629997253418 -57.612998962402344,107.71399688720703 -57.612998962402344,107.71399688720703 C-57.612998962402344,107.71399688720703 -182.2519989013672,107.71399688720703 -182.2519989013672,107.71399688720703z"></path></g><g opacity="1" transform="matrix(1,0,0,1,679.948974609375,576.8569946289062)"><path fill="rgb(255,140,183)" fill-opacity="1" d=" M-78.1510009765625,-96.62999725341797 C-78.1510009765625,-96.62999725341797 24.62299919128418,-58.034000396728516 17.70400047302246,97.49600219726562 C17.70400047302246,97.49600219726562 75.12799835205078,97.52899932861328 75.12799835205078,97.52899932861328 C75.12799835205078,97.52899932861328 76.90899658203125,7.690000057220459 18.639999389648438,-52.97800064086914 C-26.20599937438965,-96.55599975585938 -78.1510009765625,-96.62999725341797 -78.1510009765625,-96.62999725341797z"></path></g><g opacity="1" transform="matrix(1,0,0,1,664.0120239257812,569.4140014648438)"><path fill="rgb(255,140,183)" fill-opacity="1" d=" M14.163999557495117,2.7929999828338623 C13.347999572753906,6.933000087738037 6.34499979019165,9.038000106811523 -1.4789999723434448,7.495999813079834 C-9.300999641418457,5.953000068664551 -14.982000350952148,1.347000002861023 -14.164999961853027,-2.7929999828338623 C-13.348999977111816,-6.933000087738037 -6.34499979019165,-9.038000106811523 1.4759999513626099,-7.495999813079834 C9.300999641418457,-5.953000068664551 14.979999542236328,-1.347000002861023 14.163999557495117,2.7929999828338623z"></path></g><g opacity="1" transform="matrix(1,0,0,1,706.760009765625,595.198974609375)"><path fill="rgb(255,140,183)" fill-opacity="1" d=" M10.89799976348877,2.1489999294281006 C10.211000442504883,5.631999969482422 4.775000095367432,7.49399995803833 -1.24399995803833,6.307000160217285 C-7.263000011444092,5.119999885559082 -11.585000038146973,1.3350000381469727 -10.89900016784668,-2.1489999294281006 C-10.211000442504883,-5.631999969482422 -4.776000022888184,-7.49399995803833 1.2430000305175781,-6.307000160217285 C7.26200008392334,-5.119999885559082 11.585000038146973,-1.3339999914169312 10.89799976348877,2.1489999294281006z"></path></g><g opacity="1" transform="matrix(1,0,0,1,665.5419921875,605.6610107421875)"><path fill="rgb(255,140,183)" fill-opacity="1" d=" M11.300000190734863,2.2279999256134033 C10.607999801635742,5.738999843597412 4.98799991607666,7.585999965667725 -1.253000020980835,6.355999946594238 C-7.493000030517578,5.125 -11.991000175476074,1.2829999923706055 -11.300000190734863,-2.2279999256134033 C-10.607000350952148,-5.73799991607666 -4.986999988555908,-7.585999965667725 1.253999948501587,-6.355000019073486 C7.49399995803833,-5.125 11.991999626159668,-1.281999945640564 11.300000190734863,2.2279999256134033z"></path></g></g></g><g mask="url(#__lottie_element_6)" style="display: block;"><g transform="matrix(1.1055599451065063,0,0,1.1055599451065063,-58.50164794921875,405.24761962890625)" opacity="1"><g opacity="1" transform="matrix(1,0,0,1,306.3940124511719,361.5249938964844)"><path fill="rgb(153,172,248)" fill-opacity="1" d=" M-72.0009994506836,-54.183998107910156 C-72.0009994506836,-54.183998107910156 -71.48600006103516,-78.94499969482422 -48.42599868774414,-80.22599792480469 C-25.364999771118164,-81.50700378417969 -23.131000518798828,-47.8390007019043 -23.131000518798828,-47.8390007019043 C-23.131000518798828,-47.8390007019043 -8.710000038146973,-72.28299713134766 14.093999862670898,-59.72700119018555 C36.89799880981445,-47.172000885009766 18.91699981689453,-19.961000442504883 18.91699981689453,-19.961000442504883 C18.91699981689453,-19.961000442504883 41.59600067138672,-31.371999740600586 55.090999603271484,-10.019000053405762 C68.58499908447266,11.333000183105469 42.888999938964844,29.16200065612793 42.888999938964844,29.16200065612793 C42.888999938964844,29.16200065612793 66.87699890136719,31.83099937438965 69.43900299072266,52.15800094604492 C72.0009994506836,72.48600006103516 49.46200180053711,81.50700378417969 49.46200180053711,81.50700378417969 C49.46200180053711,81.50700378417969 -72.0009994506836,-54.183998107910156 -72.0009994506836,-54.183998107910156z"></path></g><g opacity="1" transform="matrix(1,0,0,1,306.3940124511719,361.5249938964844)"><path fill="rgb(119,145,229)" fill-opacity="1" d=" M18.91699981689453,-19.961000442504883 C18.91699981689453,-19.961000442504883 41.59600067138672,-31.371999740600586 55.090999603271484,-10.019000053405762 C68.58499908447266,11.333000183105469 42.888999938964844,29.16200065612793 42.888999938964844,29.16200065612793 C42.888999938964844,29.16200065612793 66.87699890136719,31.83099937438965 69.43900299072266,52.15800094604492 C72.0009994506836,72.48600006103516 49.46200180053711,81.50700378417969 49.46200180053711,81.50700378417969 C49.46200180053711,81.50700378417969 18.91699981689453,-19.961000442504883 18.91699981689453,-19.961000442504883z"></path><g opacity="1" transform="matrix(1,0,0,1,0,0)"></g></g><g opacity="1" transform="matrix(1,0,0,1,245.73399353027344,487.8219909667969)"><path fill="rgb(255,150,200)" fill-opacity="1" d=" M107.552001953125,186.531005859375 C107.552001953125,186.531005859375 117.92900085449219,14.60200023651123 107.552001953125,-74.56500244140625 C97.17400360107422,-163.73300170898438 36.93899917602539,-186.531005859375 -26.198999404907227,-179.36300659179688 C-79.23799896240234,-173.34100341796875 -117.9280014038086,-138.0240020751953 -114.1709976196289,-101.81099700927734 C-110.41300201416016,-65.59700012207031 -79.3239974975586,-48.34400177001953 -21.58799934387207,-47.14899826049805 C-21.075000762939453,4.78000020980835 -31.579999923706055,186.531005859375 -31.579999923706055,186.531005859375 C-31.579999923706055,186.531005859375 107.552001953125,186.531005859375 107.552001953125,186.531005859375z"></path></g><g opacity="1" transform="matrix(1,0,0,1,250.42599487304688,562.2559814453125)"><path fill="rgb(255,184,214)" fill-opacity="1" d=" M-26.39699935913086,-104.49800109863281 C-26.39699935913086,-104.49800109863281 -5.150000095367432,-120.63999938964844 14.032999992370605,-105.86900329589844 C48.196998596191406,-79.56199645996094 32.823001861572266,112.09600067138672 32.823001861572266,112.09600067138672 C32.823001861572266,112.09600067138672 -36.27299880981445,112.09600067138672 -36.27299880981445,112.09600067138672 C-36.27299880981445,112.09600067138672 -26.39699935913086,-104.49800109863281 -26.39699935913086,-104.49800109863281z"></path></g><g opacity="1" transform="matrix(1,0,0,1,331.18499755859375,563.1220092773438)"><path fill="rgb(255,140,183)" fill-opacity="1" d=" M25.173999786376953,-111.23200225830078 C25.173999786376953,-111.23200225830078 23.759000778198242,11.97700023651123 -25.69300079345703,111.39399719238281 C2.3570001125335693,111.87799835205078 21.89900016784668,111.18900299072266 21.89900016784668,111.18900299072266 C21.89900016784668,111.18900299072266 25.101999282836914,46.29899978637695 26.280000686645508,12.831999778747559 C27.45800018310547,-20.635000228881836 25.173999786376953,-111.23200225830078 25.173999786376953,-111.23200225830078z"></path></g><g opacity="1" transform="matrix(1,0,0,1,257.1059875488281,499.5480041503906)"><path fill="rgb(255,150,200)" fill-opacity="1" d=" M-35.12799835205078,8.196999549865723 C-37.41299819946289,8.196999549865723 -33.82400131225586,6.625 -34.3489990234375,4.303999900817871 C-34.957000732421875,1.6119999885559082 -34.85499954223633,-1.1640000343322754 -32.16299819946289,-1.774999976158142 C-30.982999801635742,-2.0429999828338623 -6.822000026702881,-8.196999549865723 35.8489990234375,-4.065000057220459 C38.597999572753906,-3.799999952316284 40.61000061035156,-1.3559999465942383 40.34400177001953,1.3930000066757202 C40.077999114990234,4.140999794006348 37.630001068115234,6.158999919891357 34.887001037597656,5.888000011444092 C-6.060999870300293,1.9259999990463257 -33.75,8.01099967956543 -34.025001525878906,8.074000358581543 C-34.39500045776367,8.156999588012695 -34.763999938964844,8.196999549865723 -35.12799835205078,8.196999549865723z"></path></g><g opacity="1" transform="matrix(1,0,0,1,253.71499633789062,553.6610107421875)"><path fill="rgb(255,150,200)" fill-opacity="1" d=" M-33.380001068115234,3.859999895095825 C-33.18199920654297,0.640999972820282 -32.94200134277344,-2.1710000038146973 -33.321998596191406,-2.239000082015991 C-33.125,-2.242000102996826 -7.431000232696533,-8.017999649047852 39.17399978637695,-4.127999782562256 C41.92599868774414,-3.8980000019073486 43.97100067138672,-1.4809999465942383 43.7400016784668,1.2710000276565552 C43.51100158691406,4.0229997634887695 41.09299850463867,6.066999912261963 38.34199905395508,5.836999893188477 C-6.76800012588501,2.072000026702881 -33.14899826049805,7.875 -33.45199966430664,7.934000015258789 C-33.77399826049805,7.997000217437744 -33.520999908447266,6.294000148773193 -33.380001068115234,3.859999895095825z"></path></g><g opacity="1" transform="matrix(1,0,0,1,250.30599975585938,617.489013671875)"><path fill="rgb(255,150,200)" fill-opacity="1" d=" M-33.54600143432617,8.194999694824219 C-34.069000244140625,7.763000011444092 -33.446998596191406,5.840000152587891 -33.500999450683594,3.2820000648498535 C-33.277000427246094,0.24300000071525574 -32.994998931884766,-1.5080000162124634 -33.06800079345703,-2.244999885559082 C-31.927000045776367,-2.6500000953674316 -6.824999809265137,-8.196000099182129 35.849998474121094,-4.065999984741211 C38.5989990234375,-3.799999952316284 40.611000061035156,-1.3559999465942383 40.345001220703125,1.3919999599456787 C40.07899856567383,4.139999866485596 37.624000549316406,6.1529998779296875 34.887001037597656,5.88700008392334 C-6.063000202178955,1.9249999523162842 -33.749000549316406,8.010000228881836 -34.02399826049805,8.072999954223633 C-34.39400100708008,8.156000137329102 -33.18199920654297,8.194999694824219 -33.54600143432617,8.194999694824219z"></path></g><g opacity="1" transform="matrix(1,0,0,1,167.7760009765625,355.6050109863281)"><path fill="rgb(65,62,75)" fill-opacity="1" d=" M8.199000358581543,0 C8.199000358581543,4.5279998779296875 4.5279998779296875,8.199000358581543 0,8.199000358581543 C-4.5289998054504395,8.199000358581543 -8.199000358581543,4.5279998779296875 -8.199000358581543,0 C-8.199000358581543,-4.5279998779296875 -4.5289998054504395,-8.199000358581543 0,-8.199000358581543 C4.5279998779296875,-8.199000358581543 8.199000358581543,-4.5279998779296875 8.199000358581543,0z"></path></g><g opacity="1" transform="matrix(1,0,0,1,226.1929931640625,355.6050109863281)"><path fill="rgb(65,62,75)" fill-opacity="1" d=" M8.199999809265137,0 C8.199999809265137,4.5279998779296875 4.5289998054504395,8.199000358581543 0.0010000000474974513,8.199000358581543 C-4.5279998779296875,8.199000358581543 -8.199000358581543,4.5279998779296875 -8.199000358581543,0 C-8.199000358581543,-4.5279998779296875 -4.5279998779296875,-8.199000358581543 0.0010000000474974513,-8.199000358581543 C4.5289998054504395,-8.199000358581543 8.199999809265137,-4.5279998779296875 8.199999809265137,0z"></path></g><g opacity="1" transform="matrix(1,0,0,1,193.14199829101562,388.01800537109375)"><path stroke-linecap="round" stroke-linejoin="miter" fill-opacity="0" stroke-miterlimit="10" stroke="rgb(65,62,75)" stroke-opacity="1" stroke-width="8" d=" M-20.242000579833984,1.152999997138977 C-20.242000579833984,1.152999997138977 -1.9220000505447388,-1.152999997138977 20.242000579833984,1.152999997138977"></path></g></g></g><g transform="matrix(1.1055599451065063,0,0,1.1055599451065063,-58.50238037109375,-52.75238037109375)" opacity="1" style="display: block;"><g opacity="1" transform="matrix(1,0,0,1,558.5239868164062,746.4349975585938)"><path fill="rgb(239,244,255)" fill-opacity="1" d=" M403.34698486328125,-72.08200073242188 C403.34698486328125,-72.08200073242188 313.6629943847656,-72.08200073242188 313.6629943847656,-72.08200073242188 C313.6629943847656,-72.08200073242188 270.5480041503906,-72.08200073242188 270.5480041503906,-72.08200073242188 C270.5480041503906,-72.08200073242188 215.29600524902344,-72.08200073242188 215.29600524902344,-72.08200073242188 C215.29600524902344,-72.08200073242188 144.7429962158203,-72.08200073242188 144.7429962158203,-72.08200073242188 C144.7429962158203,-72.08200073242188 74.86599731445312,-72.08200073242188 74.86599731445312,-72.08200073242188 C74.86599731445312,-72.08200073242188 -4.502999782562256,-72.08200073242188 -4.502999782562256,-72.08200073242188 C-4.502999782562256,-72.08200073242188 -97.5510025024414,-72.08200073242188 -97.5510025024414,-72.08200073242188 C-97.5510025024414,-72.08200073242188 -152.84500122070312,-72.08200073242188 -152.84500122070312,-72.08200073242188 C-152.84500122070312,-72.08200073242188 -260.4830017089844,-72.08200073242188 -260.4830017089844,-72.08200073242188 C-260.4830017089844,-72.08200073242188 -351.6969909667969,-72.08200073242188 -351.6969909667969,-72.08200073242188 C-351.6969909667969,-72.08200073242188 -403.34600830078125,-72.08200073242188 -403.34600830078125,-72.08200073242188 C-425.5400085449219,-72.08200073242188 -443.5299987792969,-54.09199905395508 -443.5299987792969,-31.898000717163086 C-443.5299987792969,-9.706000328063965 -425.5400085449219,8.28499984741211 -403.34600830078125,8.28499984741211 C-403.34600830078125,8.28499984741211 -380.31500244140625,8.28499984741211 -380.31500244140625,8.28499984741211 C-367.4939880371094,8.28499984741211 -357.35400390625,18.812999725341797 -357.43701171875,31.632999420166016 C-357.43701171875,31.632999420166016 -357.43701171875,31.89699935913086 -357.43701171875,31.89699935913086 C-357.43701171875,54.090999603271484 -339.4469909667969,72.08200073242188 -317.2539978027344,72.08200073242188 C-317.2539978027344,72.08200073242188 163.51800537109375,72.08200073242188 163.51800537109375,72.08200073242188 C185.7100067138672,72.08200073242188 203.7010040283203,54.090999603271484 203.7010040283203,31.89699935913086 C203.7010040283203,31.89699935913086 203.7010040283203,31.632999420166016 203.7010040283203,31.632999420166016 C203.6179962158203,18.812999725341797 213.7570037841797,8.28499984741211 226.5780029296875,8.28499984741211 C226.5780029296875,8.28499984741211 403.34698486328125,8.28499984741211 403.34698486328125,8.28499984741211 C425.53900146484375,8.28499984741211 443.531005859375,-9.706000328063965 443.531005859375,-31.898000717163086 C443.531005859375,-54.09199905395508 425.53900146484375,-72.08200073242188 403.34698486328125,-72.08200073242188z"></path></g><g opacity="1" transform="matrix(1,0,0,1,450.2619934082031,742.5089721679688)"><path fill="rgb(217,227,251)" fill-opacity="1" d=" M112.86199951171875,21.010000228881836 C112.86199951171875,21.010000228881836 -112.86399841308594,21.010000228881836 -112.86399841308594,21.010000228881836 C-124.46700286865234,21.010000228881836 -133.87399291992188,11.604000091552734 -133.87399291992188,0 C-133.87399291992188,-11.602999687194824 -124.46700286865234,-21.010000228881836 -112.86399841308594,-21.010000228881836 C-112.86399841308594,-21.010000228881836 112.86199951171875,-21.010000228881836 112.86199951171875,-21.010000228881836 C124.46600341796875,-21.010000228881836 133.8730010986328,-11.602999687194824 133.8730010986328,0 C133.8730010986328,11.604000091552734 124.46600341796875,21.010000228881836 112.86199951171875,21.010000228881836z"></path></g></g></g></svg></div>
+			<input type="text" id="delay_timer" value="5" hidden="">
+			<input type="text" id="is_loop" value="0" hidden="">
+				<!-- svg animation end -->
+	</footer><!-- #colophon -->
+	</div>
+
+</div>
+</div><!-- #page -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+		<!-- Geotargeting plugin Debug Info START-->
+		<div id="geot-debug-info" style="display: none;"><!--
+		Country: United States of America
+		Country code: US
+		IP: 34.66.211.81
+		Geot Version: 1.3.5.1
+		PHP Version: 7.3.33-1+ubuntu18.04.1+deb.sury.org+1
+		-->
+		</div>
+		<!-- Geotargeting plugin Debug Info END-->
+		
+<!-- Resource jQuery -->
+<div class="tigmo-bluebox">
+    
+</div>
+																	   
+	<div class="blob-svg">
+		<svg xmlns="http://www.w3.org/2000/svg" version="1.1">
+			<defs>
+				<filter id="goo">
+					<feGaussianBlur in="SourceGraphic" result="blur" stdDeviation="10"></feGaussianBlur>
+					<feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0 0 1 0 0 0 0 0 1 0 0 0 0 0 21 -7" result="goo"></feColorMatrix>
+					<feBlend in2="goo" in="SourceGraphic" result="mix"></feBlend>
+				</filter>
+			</defs>
+		</svg>
+	</div>
+
+<div class="footer--ict-section">
+
+
+	<section class="section--ict">
+
+		<div class="ict">
+			<div class="ict-form-open-btn">
+				<a href="javascript:void(0)"><span class="btn-text">Psst!</span><span class="btn-text-hover">Click here..</span></a>
+			</div>
+			<div class="ict-form-wrapper">
+				<a href="javascript:void(0)" class="ict-close"></a>
+				<div class="ict-form-text">
+					<h3> Get in touch</h3>
+					<p>We are a well kept industry secret, working directly with some of the best designers in Australia. If you'd like to learn more about how you can work us, please fill in the form below.</p>
+				</div>
+				<!-- HTML Forms v1.3.23 - https://wordpress.org/plugins/html-forms/ --><form method="post" class="hf-form hf-form-2178 "><input type="hidden" name="_hf_form_id" value="2178"><div style="display: none;"><input type="text" name="_hf_h2178" value=""></div><div class="hf-fields-wrap"><div class="text-field">
+	<input type="text" name="NAME" required="" placeholder="Name" class="input-field">
+</div>
+<div class="text-field">
+	<input type="email" name="EMAIL" required="" placeholder="Email" class="input-field">
+</div>
+<div class="text-field">  
+	<input type="text" name="WEBSITE" required="" placeholder="Website" class="input-field">
+</div>
+<div class="message-field">
+	<textarea name="MESSAGE" required="" placeholder="Message" class="input-field"></textarea>
+</div>
+<div class="submit-field">
+  <div class="input-btn-field blob-btn blob-white-color">
+    <input type="submit" value="Send" class="input-btn">
+    <span class="blob-btn__inner">	  							   
+      <span class="blob-btn__blobs">	   								  
+        <span class="blob-btn__blob"></span> <span class="blob-btn__blob"></span>      							   
+        <span class="blob-btn__blob"></span> <span class="blob-btn__blob"></span>						   
+      </span>					   
+    </span>
+  </div>
+</div></div></form><!-- / HTML Forms -->			</div>
+		</div>
+		
+		
+	</section>
+</div>
+		
+		 <!--GET IP ADDRESS-->
+		 		
+		
+
+
+
+
+</div><div></div>`} />
+</Layout>
